@@ -47,6 +47,7 @@
 | RN20 | Ver el panel de indicadores agregados: personas activas por sexo, formación completada y retención. |
 | RN30 |  Generar y exportar (PDF o Excel) un informe de formación por periodo de las personas en reducción de jornada o excedencia: persona, situación, curso, horas, fecha de finalización y competencias adquiridas. Sirve como evidencia ante la Administración Pública (Inspección de Trabajo, plan de igualdad, FUNDAE). |
 | RN31 |  El informe se puede filtrar por periodo, por situación (reducción de jornada o excedencia) y por sexo. |
+| RN38 | Ver avisos de seguimiento: vueltas en las próximas 6 semanas, personas sin mentora y planes sin avance en 30 días. |
 ---
 
 ## Mentora
@@ -66,8 +67,8 @@
 |----|-------|
 | RN16 | Mantenimiento de cursos por rol y sus rutas asociadas (de momento, manual). |
 | RN17 | Las mentoras pueden ser internas o externas; las externas se incentivan con certificados. |
-| RN33 | Seleccionar primero la empresa (filtro global). Los datos propios de la empresa (mentoras internas, usuarias y roles, indicadores e informes) se muestran solo para la empresa elegida. |
-
+|| RN33 | Seleccionar la empresa en la cabecera (siempre visible). Filtra solo la zona "Empresa seleccionada": usuarias y roles, mentoras internas e informe de formación. La zona "Configuración global" (empresas, cursos y rutas, mentoras externas) no cambia con el filtro. |
+| RN18 | Mantenimiento de mentoras en dos listados: internas (por empresa) y externas (globales). Datos: nombre, resumen profesional y correo de contacto. |
 | RN18 | Mantenimiento de mentoras: tipo (interna/externa), nombre, resumen profesional y correo de contacto. |
 | RN35 | Las mentoras **externas** son transversales: se pueden asignar a personas de cualquier empresa. |
 | RN36 | Las mentoras **internas** pertenecen a una empresa y solo pueden acompañar a personas de esa empresa. |
