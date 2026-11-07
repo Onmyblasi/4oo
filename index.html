@@ -29,13 +29,13 @@
         <span class="marca__lema">For Our Ovaries</span>
       </a>
 
-      <a class="boton-cuenta" href="cuenta.html">
+      <button type="button" class="boton-cuenta" aria-haspopup="dialog" aria-controls="acceso">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <circle cx="12" cy="8" r="4"/>
           <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
         </svg>
         Cuenta
-      </a>
+      </button>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -101,5 +101,53 @@
     </main>
 
   </div>
+  <!-- VENTANA DE ACCESO (demo) -->
+  <dialog class="acceso" id="acceso" aria-labelledby="acceso-titulo">
+    <form class="acceso__form" action="usuaria-con-activacion.html" method="get">
+      <button type="button" class="acceso__cerrar" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+
+      <h2 class="acceso__titulo" id="acceso-titulo">Ingresa a 4oo</h2>
+
+      <label class="acceso__etiqueta" for="acceso-usuario">Usuario</label>
+      <input class="acceso__campo" id="acceso-usuario" type="text" autocomplete="username" autofocus>
+
+      <label class="acceso__etiqueta" for="acceso-clave">Contraseña</label>
+      <input class="acceso__campo" id="acceso-clave" type="password" autocomplete="current-password">
+
+      <button type="submit" class="acceso__ingresar">Ingresar</button>
+
+      <a class="acceso__olvido" href="#" role="button">¿Olvidaste tu contraseña?</a>
+    </form>
+  </dialog>
+
+  <script>
+    (function () {
+      var dialogo = document.getElementById('acceso');
+      var abrir = document.querySelector('.boton-cuenta');
+      abrir.addEventListener('click', function () {
+        dialogo.showModal();
+      });
+      dialogo.querySelector('.acceso__cerrar').addEventListener('click', function () {
+        dialogo.close();
+      });
+      // Cerrar al hacer clic fuera de la ventana
+      dialogo.addEventListener('click', function (e) {
+        if (e.target === dialogo) dialogo.close();
+      });
+      // Solo demo: el enlace no hace nada
+      dialogo.querySelector('.acceso__olvido').addEventListener('click', function (e) {
+        e.preventDefault();
+      });
+      // Solo demo: al ingresar va a la vista de usuaria con activación (sin enviar datos)
+      dialogo.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        window.location.href = 'usuaria-con-activacion.html';
+      });
+    })();
+  </script>
 </body>
 </html>

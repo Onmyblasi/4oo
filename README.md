@@ -75,6 +75,8 @@
 
 | RN21 | Gestionar usuarias y roles (usuaria, RRHH, mentora, admin) de la empresa seleccionada.
 | RN34 | Dar de alta y mantener empresas: nombre, CIF, nº de personas en plantilla y estado (activa o inactiva). |
+| RN40 | Ver un resumen de la empresa seleccionada: personas activas (reducción de jornada o excedencia), mentoras sin asignar, planes sin avance en 30 días y acceso al informe de formación. |
+| RN41 | Importar personas y cursos desde un fichero CSV *(de momento, solo visual)*. |
 | RN30 | Por el filtro de empresa:   Generar y exportar (PDF o Excel) un informe de formación por periodo de las personas en reducción de jornada o excedencia: persona, situación, curso, horas, fecha de finalización y competencias adquiridas. Sirve como evidencia ante la Administración Pública (Inspección de Trabajo, plan de igualdad, FUNDAE). |
 | RN31 | Por el filtro de empresa: El informe se puede filtrar por periodo, por situación (reducción de jornada o excedencia) y por sexo. |
 

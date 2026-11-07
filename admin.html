@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/admin.css">
 </head>
 <body>
 <nav aria-label="Pantallas del prototipo" class="proto-nav">
@@ -17,198 +18,541 @@
   <a href="mentora.html">Mentora</a>
   <a href="admin.html">Administración</a>
 </nav>
-<div style="font-family: Inter, system-ui, sans-serif; color: #1B1F2A; background: #F4F4F4; min-height: 100vh">
-  <header class="cabecera-app">
-    <div class="cabecera-app__fila">
-      <div class="cabecera-app__marca">
-        <a class="marca" href="index.html" aria-label="4oo, ir al inicio">
-          <svg class="marca__logo" viewBox="40 40 284 116" width="88" height="36" aria-hidden="true">
-            <text x="136" y="150" fill="#3A1C3D" font-family="Space Grotesk, sans-serif" font-size="150" text-anchor="end">4</text>
-            <circle cx="186" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
-            <circle cx="282" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
-            <path d="M221.7,122.6 C223,130 236,136 240,150 M246.3,122.6 C245,130 232,136 228,150" fill="none" stroke="#3A1C3D" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-          <span class="marca__lema">For Our Ovaries</span>
-        </a>
-        <span class="cabecera-app__rol">Administración</span>
-      </div>
-      <div class="cabecera-app__selector">
-        <label for="empresa">Empresa</label>
-        <select id="empresa"><option>Software Málaga S.L.</option><option>Datos Sur S.A.</option><option>Consultora Norte S.L.</option></select>
-      </div>
-    </div>
-    <div class="cabecera-app__fila cabecera-app__fila--secundaria">
-      <nav class="cabecera-app__nav" aria-label="Secciones admin">
-        <span class="cabecera-app__grupo">Empresa seleccionada</span>
-        <a class="cabecera-app__enlace" href="#usuarias">Usuarias y roles</a>
-        <a class="cabecera-app__enlace" href="#internas">Mentoras internas</a>
-        <a class="cabecera-app__enlace" href="#informe">Informe de formación</a>
-        <span class="cabecera-app__separador" aria-hidden="true"></span>
-        <span class="cabecera-app__grupo">Global</span>
-        <a class="cabecera-app__enlace" href="#empresas">Empresas</a>
-        <a class="cabecera-app__enlace" href="#cursos">Cursos y rutas</a>
-        <a class="cabecera-app__enlace" href="#externas">Mentoras externas</a>
-      </nav>
-    </div>
-  </header>
 
-  <main style="max-width: 1200px; margin: 0 auto; padding: 32px; display: flex; flex-direction: column; gap: 24px">
-    <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; padding-bottom: 8px; border-bottom: 2px solid #8B3DFF">
-      <h1 style="margin: 0; font-family: Roboto, sans-serif; font-size: 26px">Software Málaga S.L.</h1>
-      <span style="font-size: 13px; font-weight: 600; color: #1E3388; background: #EFE5FF; padding: 4px 10px; border-radius: 999px">Datos de la empresa seleccionada</span>
-    </div>
-    <p style="margin: -12px 0 0; font-size: 13px; color: #555B6B">Cambia de empresa en el selector de arriba. Solo Administración puede cambiar de empresa.</p>
+<div class="adm">
 
-    <section id="usuarias" aria-labelledby="usu-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-      <h2 id="usu-title" style="margin: 0; font-size: 20px">Usuarias y roles de Software Málaga S.L.</h2>
-      <div style="overflow-x: auto">
-        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 600px">
-          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Persona</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Correo</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Rol</th>
-          </tr></thead>
-          <tbody>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Marta R.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">marta@ejemplo.com</td><td style="padding: 8px 12px; border-bottom: 1px solid #EEF0F4"><label for="r1" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Rol de Marta</label><select id="r1" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Usuaria</option><option>RRHH</option><option>Mentora</option><option>Admin</option></select></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Laura García</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">laura@ejemplo.com</td><td style="padding: 8px 12px; border-bottom: 1px solid #EEF0F4"><label for="r2" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Rol de Laura</label><select id="r2" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Mentora</option><option>Usuaria</option><option>RRHH</option><option>Admin</option></select></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Elena T.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">elena@ejemplo.com</td><td style="padding: 8px 12px; border-bottom: 1px solid #EEF0F4"><label for="r3" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Rol de Elena</label><select id="r3" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>RRHH</option><option>Usuaria</option><option>Mentora</option><option>Admin</option></select></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="internas" aria-labelledby="int-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="int-title" style="margin: 0; font-size: 20px">Mentoras internas</h2>
-        <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nueva mentora interna</button>
-      </div>
-      <p style="margin: 0; font-size: 13px; color: #555B6B">Solo acompañan a personas de Software Málaga S.L.</p>
-      <div style="overflow-x: auto">
-        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px">
-          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px"><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Nombre</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Resumen profesional</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Correo</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Acción</th></tr></thead>
-          <tbody>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Laura García</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Tech Lead, 12 años en backend</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">laura@ejemplo.com</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#internas" style="font-weight: 600">Editar</a></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Rocío M.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA Lead, experta en testing automatizado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">rocio@ejemplo.com</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#internas" style="font-weight: 600">Editar</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="informe" aria-labelledby="inf-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="inf-title" style="margin: 0; font-size: 20px">Informe de formación</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px">
-          <button type="button" style="min-height: 44px; padding: 0 16px; border: 1px solid #C9CCD6; border-radius: 8px; background: #FFFFFF; color: #1B1F2A; font-size: 14px; font-weight: 600; cursor: pointer">Exportar Excel</button>
-          <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">Exportar PDF</button>
-        </div>
-      </div>
-      <p style="margin: 0; font-size: 13px; color: #555B6B">Evidencia para la Administración Pública: Inspección de Trabajo, plan de igualdad, FUNDAE.</p>
-      <form style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end">
-        <div style="display: flex; flex-direction: column; gap: 4px">
-          <label for="inf-periodo" style="font-size: 13px; color: #555B6B">Periodo</label>
-          <select id="inf-periodo" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Ene–Dic 2026</option><option>Ene–Jun 2026</option></select>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 4px">
-          <label for="inf-sit" style="font-size: 13px; color: #555B6B">Situación</label>
-          <select id="inf-sit" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Todas</option><option>Reducción de jornada</option><option>Excedencia</option></select>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 4px">
-          <label for="inf-sexo" style="font-size: 13px; color: #555B6B">Sexo</label>
-          <select id="inf-sexo" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Todos</option><option>Mujer</option><option>Hombre</option></select>
-        </div>
-      </form>
-      <div style="overflow-x: auto">
-        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 860px">
-          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Persona</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Situación</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Curso</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Horas</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Finalizado</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Competencias</th>
-          </tr></thead>
-          <tbody>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Marta R.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Reducción 25 %</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Docker y contenedores</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">6</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">12/03/2026</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Docker</td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Andrea P.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Excedencia</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Power BI avanzado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">10</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">28/05/2026</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Power BI, DAX</td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Javier L.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Reducción 20 %</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Testing automatizado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">8</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">03/09/2026</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Testing</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="margin: 0; font-size: 13px; color: #555B6B">Total: 3 personas · 3 cursos · 24 h. Datos de ejemplo.</p>
-    </section>
-
-    <div style="height: 16px"></div>
-    <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; padding-bottom: 8px; border-bottom: 2px solid #43D685">
-      <h1 style="margin: 0; font-family: Roboto, sans-serif; font-size: 26px">Configuración global</h1>
-      <span style="font-size: 13px; font-weight: 600; color: #1E3388; background: #D9F7E7; padding: 4px 10px; border-radius: 999px">Común a todas las empresas</span>
+  <!-- ============ MENÚ LATERAL ============ -->
+  <aside class="adm-lateral">
+    <div class="adm-lateral__cabeza">
+      <a class="adm-logo" href="index.html" aria-label="4oo Admin, ir al inicio">
+        <svg viewBox="40 40 284 116" width="72" height="30" aria-hidden="true">
+          <text x="136" y="150" fill="#3A1C3D" font-family="Space Grotesk, sans-serif" font-size="150" text-anchor="end">4</text>
+          <circle cx="186" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
+          <circle cx="282" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
+          <path d="M221.7,122.6 C223,130 236,136 240,150 M246.3,122.6 C245,130 232,136 228,150" fill="none" stroke="#3A1C3D" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="adm-logo__rol" aria-hidden="true">· Admin</span>
+      </a>
+      <button type="button" class="adm-menu-boton" aria-expanded="false" aria-controls="adm-menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Menú<span class="sr-only">: sección actual</span> · <span id="adm-menu-actual">Resumen</span></span>
+      </button>
     </div>
 
-    <section id="empresas" aria-labelledby="emps-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="emps-title" style="margin: 0; font-size: 20px">Empresas</h2>
-        <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nueva empresa</button>
+    <div class="adm-empresa">
+      <label for="empresa">Empresa <span class="adm-rn">RN33</span></label>
+      <select id="empresa">
+        <option>Software Málaga S.L.</option>
+        <option>Datos Sur S.A.</option>
+        <option>Consultora Norte S.L.</option>
+      </select>
+    </div>
+
+    <nav class="adm-menu" id="adm-menu" aria-label="Secciones de administración">
+      <div class="adm-grupo adm-grupo--empresa">
+        <p class="adm-grupo__titulo" id="grupo-empresa">Empresa</p>
+        <ul aria-labelledby="grupo-empresa">
+          <li><a class="adm-menu__enlace" href="#resumen">Resumen</a></li>
+          <li><a class="adm-menu__enlace" href="#personas">Personas y roles</a></li>
+          <li><a class="adm-menu__enlace" href="#internas">Mentoras internas</a></li>
+          <li><a class="adm-menu__enlace" href="#informes">Informes</a></li>
+        </ul>
       </div>
-      <div style="overflow-x: auto">
-        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 700px">
-          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Empresa</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">CIF</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Plantilla</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Estado</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Acción</th>
-          </tr></thead>
-          <tbody>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Software Málaga S.L.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">[CIF]</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">80</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #D9F7E7; padding: 3px 8px; border-radius: 999px">Activa</span></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#empresas" style="font-weight: 600">Editar</a></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Datos Sur S.A.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">[CIF]</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">150</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #D9F7E7; padding: 3px 8px; border-radius: 999px">Activa</span></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#empresas" style="font-weight: 600">Editar</a></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Consultora Norte S.L.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">[CIF]</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">320</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><span style="font-size: 12px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 999px">Inactiva</span></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#empresas" style="font-weight: 600">Editar</a></td></tr>
-          </tbody>
-        </table>
+      <hr class="adm-separador">
+      <div class="adm-grupo adm-grupo--global">
+        <p class="adm-grupo__titulo" id="grupo-global">Global</p>
+        <ul aria-labelledby="grupo-global">
+          <li><a class="adm-menu__enlace" href="#empresas">Empresas</a></li>
+          <li><a class="adm-menu__enlace" href="#catalogo">Catálogo</a></li>
+          <li><a class="adm-menu__enlace" href="#externas">Mentoras externas</a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ============ CONTENIDO ============ -->
+  <main class="adm-contenido">
+
+    <!-- RESUMEN -->
+    <section class="adm-seccion" id="resumen" data-nombre="Resumen" aria-labelledby="t-resumen">
+      <header class="adm-cabecera">
+        <nav class="adm-migas" aria-label="Ruta de navegación"><ol><li>Empresa</li><li><span aria-current="page">Resumen</span></li></ol></nav>
+        <div class="adm-cabecera__fila">
+          <h1 class="adm-titulo" id="t-resumen" tabindex="-1">Resumen de <span class="js-empresa">Software Málaga S.L.</span> <span class="adm-rn">RN40</span></h1>
+          <div class="adm-acciones">
+            <a class="adm-boton" href="#informes">Ver informe de formación</a>
+          </div>
+        </div>
+        <p class="adm-subtitulo">Solo Administración puede cambiar de empresa <span class="adm-rn">RN37</span></p>
+      </header>
+
+      <div class="adm-kpis">
+        <article class="adm-kpi">
+          <h2 class="adm-kpi__titulo">Personas activas</h2>
+          <p class="adm-kpi__valor">3</p>
+          <p class="adm-kpi__detalle">2 en reducción de jornada · 1 en excedencia</p>
+        </article>
+        <article class="adm-kpi adm-kpi--aviso">
+          <h2 class="adm-kpi__titulo">Mentoras sin asignar</h2>
+          <p class="adm-kpi__valor">1</p>
+          <p class="adm-kpi__detalle">Javier L. aún no tiene mentora</p>
+        </article>
+        <article class="adm-kpi adm-kpi--aviso">
+          <h2 class="adm-kpi__titulo">Planes sin avance en 30 días</h2>
+          <p class="adm-kpi__valor">1</p>
+          <p class="adm-kpi__detalle">Andrea P. · último avance hace 34 días</p>
+        </article>
+      </div>
+      <p class="adm-sin-resultados">Datos de ejemplo.</p>
+    </section>
+
+    <!-- PERSONAS Y ROLES -->
+    <section class="adm-seccion" id="personas" data-nombre="Personas y roles" aria-labelledby="t-personas" hidden>
+      <header class="adm-cabecera">
+        <nav class="adm-migas" aria-label="Ruta de navegación"><ol><li>Empresa</li><li><span aria-current="page">Personas y roles</span></li></ol></nav>
+        <div class="adm-cabecera__fila">
+          <h1 class="adm-titulo" id="t-personas" tabindex="-1">Personas y roles <span class="adm-rn">RN21 · RN41</span></h1>
+          <div class="adm-acciones">
+            <div class="adm-buscador">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <label class="sr-only" for="buscar-personas">Buscar personas</label>
+              <input type="search" id="buscar-personas" placeholder="Buscar persona o correo" data-buscar>
+            </div>
+            <button type="button" class="adm-boton adm-boton--secundario">Importar CSV</button>
+            <button type="button" class="adm-boton" data-drawer="persona" data-titulo="Nueva persona">+ Nueva persona</button>
+          </div>
+        </div>
+        <p class="adm-subtitulo">Personas de <span class="js-empresa">Software Málaga S.L.</span></p>
+      </header>
+
+      <div class="adm-tarjeta">
+        <div class="adm-tabla-scroll">
+          <table class="adm-tabla">
+            <thead><tr><th scope="col">Persona</th><th scope="col">Correo</th><th scope="col">Rol</th><th scope="col">Acción</th></tr></thead>
+            <tbody>
+              <tr><td>Marta R.</td><td>marta@ejemplo.com</td><td class="adm-celda-campo"><label for="r1" class="sr-only">Rol de Marta</label><select id="r1"><option>Usuaria</option><option>RRHH</option><option>Mentora</option><option>Admin</option></select></td><td><button type="button" class="adm-enlace" data-drawer="persona" data-titulo="Editar persona" data-valor="Marta R.">Editar<span class="sr-only"> a Marta R.</span></button></td></tr>
+              <tr><td>Laura García</td><td>laura@ejemplo.com</td><td class="adm-celda-campo"><label for="r2" class="sr-only">Rol de Laura</label><select id="r2"><option>Mentora</option><option>Usuaria</option><option>RRHH</option><option>Admin</option></select></td><td><button type="button" class="adm-enlace" data-drawer="persona" data-titulo="Editar persona" data-valor="Laura García">Editar<span class="sr-only"> a Laura García</span></button></td></tr>
+              <tr><td>Elena T.</td><td>elena@ejemplo.com</td><td class="adm-celda-campo"><label for="r3" class="sr-only">Rol de Elena</label><select id="r3"><option>RRHH</option><option>Usuaria</option><option>Mentora</option><option>Admin</option></select></td><td><button type="button" class="adm-enlace" data-drawer="persona" data-titulo="Editar persona" data-valor="Elena T.">Editar<span class="sr-only"> a Elena T.</span></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="adm-sin-resultados js-vacio" hidden>No hay resultados para esa búsqueda.</p>
       </div>
     </section>
 
-    <section id="cursos" aria-labelledby="cur-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="cur-title" style="margin: 0; font-size: 20px">Cursos por rol y rutas</h2>
-        <span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #EFE5FF; padding: 4px 10px; border-radius: 999px">Catálogo común a todas las empresas</span>
-        <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nuevo curso</button>
-      </div>
-      <div style="overflow-x: auto">
-        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 860px">
-          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Curso</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Rol</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Ruta</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Horas</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">URL</th>
-            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Acción</th>
-          </tr></thead>
-          <tbody>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Docker y contenedores</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Desarrollo backend</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Backend moderno</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">6</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#" target="_blank" rel="noopener noreferrer" style="font-weight: 600">Ver web<span class="sr-only"> del curso Docker y contenedores (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Power BI avanzado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data Analyst</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">10</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#" target="_blank" rel="noopener noreferrer" style="font-weight: 600">Ver web<span class="sr-only"> del curso Power BI avanzado (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Testing automatizado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA y testing</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">8</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#" target="_blank" rel="noopener noreferrer" style="font-weight: 600">Ver web<span class="sr-only"> del curso Testing automatizado (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
-          </tbody>
-        </table>
+    <!-- MENTORAS INTERNAS -->
+    <section class="adm-seccion" id="internas" data-nombre="Mentoras internas" aria-labelledby="t-internas" hidden>
+      <header class="adm-cabecera">
+        <nav class="adm-migas" aria-label="Ruta de navegación"><ol><li>Empresa</li><li><span aria-current="page">Mentoras internas</span></li></ol></nav>
+        <div class="adm-cabecera__fila">
+          <h1 class="adm-titulo" id="t-internas" tabindex="-1">Mentoras internas <span class="adm-rn">RN17 · RN18 · RN36</span></h1>
+          <div class="adm-acciones">
+            <div class="adm-buscador">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <label class="sr-only" for="buscar-internas">Buscar mentoras internas</label>
+              <input type="search" id="buscar-internas" placeholder="Buscar mentora" data-buscar>
+            </div>
+            <button type="button" class="adm-boton" data-drawer="mentora" data-titulo="Nueva mentora interna">+ Nueva mentora interna</button>
+          </div>
+        </div>
+        <p class="adm-subtitulo">Solo acompañan a personas de <span class="js-empresa">Software Málaga S.L.</span></p>
+      </header>
+
+      <div class="adm-tarjeta">
+        <div class="adm-tabla-scroll">
+          <table class="adm-tabla">
+            <thead><tr><th scope="col">Nombre</th><th scope="col">Resumen profesional</th><th scope="col">Correo</th><th scope="col">Acción</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Laura García</strong></td><td>Tech Lead, 12 años en backend</td><td>laura@ejemplo.com</td><td><button type="button" class="adm-enlace" data-drawer="mentora" data-titulo="Editar mentora interna" data-valor="Laura García">Editar<span class="sr-only"> a Laura García</span></button></td></tr>
+              <tr><td><strong>Rocío M.</strong></td><td>QA Lead, experta en testing automatizado</td><td>rocio@ejemplo.com</td><td><button type="button" class="adm-enlace" data-drawer="mentora" data-titulo="Editar mentora interna" data-valor="Rocío M.">Editar<span class="sr-only"> a Rocío M.</span></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="adm-sin-resultados js-vacio" hidden>No hay resultados para esa búsqueda.</p>
       </div>
     </section>
 
-    <section id="externas" aria-labelledby="ext-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="ext-title" style="margin: 0; font-size: 20px">Mentoras externas</h2>
-        <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nueva mentora externa</button>
+    <!-- INFORMES -->
+    <section class="adm-seccion" id="informes" data-nombre="Informes" aria-labelledby="t-informes" hidden>
+      <header class="adm-cabecera">
+        <nav class="adm-migas" aria-label="Ruta de navegación"><ol><li>Empresa</li><li><span aria-current="page">Informes</span></li></ol></nav>
+        <div class="adm-cabecera__fila">
+          <h1 class="adm-titulo" id="t-informes" tabindex="-1">Informe de formación <span class="adm-rn">RN30 · RN31</span></h1>
+          <div class="adm-acciones">
+            <div class="adm-buscador">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <label class="sr-only" for="buscar-informes">Buscar en el informe</label>
+              <input type="search" id="buscar-informes" placeholder="Buscar persona o curso" data-buscar>
+            </div>
+            <button type="button" class="adm-boton adm-boton--secundario">Exportar Excel</button>
+            <button type="button" class="adm-boton">Exportar PDF</button>
+          </div>
+        </div>
+        <p class="adm-subtitulo">Evidencia para la Administración Pública: Inspección de Trabajo, plan de igualdad, FUNDAE.</p>
+      </header>
+
+      <div class="adm-tarjeta">
+        <form class="adm-filtros" aria-label="Filtros del informe">
+          <div>
+            <label for="inf-periodo">Periodo</label>
+            <select id="inf-periodo"><option>Ene–Dic 2026</option><option>Ene–Jun 2026</option></select>
+          </div>
+          <div>
+            <label for="inf-sit">Situación</label>
+            <select id="inf-sit"><option>Todas</option><option>Reducción de jornada</option><option>Excedencia</option></select>
+          </div>
+          <div>
+            <label for="inf-sexo">Sexo</label>
+            <select id="inf-sexo"><option>Todos</option><option>Mujer</option><option>Hombre</option></select>
+          </div>
+        </form>
+        <div class="adm-tabla-scroll">
+          <table class="adm-tabla" style="min-width: 820px">
+            <thead><tr><th scope="col">Persona</th><th scope="col">Situación</th><th scope="col">Curso</th><th scope="col">Horas</th><th scope="col">Finalizado</th><th scope="col">Competencias</th></tr></thead>
+            <tbody>
+              <tr><td>Marta R.</td><td>Reducción 25 %</td><td>Docker y contenedores</td><td>6</td><td>12/03/2026</td><td>Docker</td></tr>
+              <tr><td>Andrea P.</td><td>Excedencia</td><td>Power BI avanzado</td><td>10</td><td>28/05/2026</td><td>Power BI, DAX</td></tr>
+              <tr><td>Javier L.</td><td>Reducción 20 %</td><td>Testing automatizado</td><td>8</td><td>03/09/2026</td><td>Testing</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="adm-sin-resultados js-vacio" hidden>No hay resultados para esa búsqueda.</p>
+        <p class="adm-sin-resultados">Total: 3 personas · 3 cursos · 24 h. Datos de ejemplo.</p>
       </div>
-      <p style="margin: 0; font-size: 13px; color: #555B6B">Disponibles para todas las empresas. Se incentivan con certificados.</p>
-      <div style="overflow-x: auto">
-        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 820px">
-          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px"><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Nombre</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Resumen profesional</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Correo</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Certificado</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Acción</th></tr></thead>
-          <tbody>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Carmen S.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data Scientist, mentora en comunidades tech</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">carmen@ejemplo.com</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#externas" style="font-weight: 600">Emitir certificado</a></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#externas" style="font-weight: 600">Editar</a></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Pilar N.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Product Manager, 10 años en fintech</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">pilar@ejemplo.com</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">—</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#externas" style="font-weight: 600">Editar</a></td></tr>
-          </tbody>
-        </table>
+    </section>
+
+    <!-- EMPRESAS -->
+    <section class="adm-seccion" id="empresas" data-nombre="Empresas" aria-labelledby="t-empresas" hidden>
+      <header class="adm-cabecera">
+        <nav class="adm-migas" aria-label="Ruta de navegación"><ol><li>Global</li><li><span aria-current="page">Empresas</span></li></ol></nav>
+        <div class="adm-cabecera__fila">
+          <h1 class="adm-titulo" id="t-empresas" tabindex="-1">Empresas <span class="adm-rn">RN34</span></h1>
+          <div class="adm-acciones">
+            <div class="adm-buscador">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <label class="sr-only" for="buscar-empresas">Buscar empresas</label>
+              <input type="search" id="buscar-empresas" placeholder="Buscar empresa" data-buscar>
+            </div>
+            <button type="button" class="adm-boton" data-drawer="empresa" data-titulo="Nueva empresa">+ Nueva empresa</button>
+          </div>
+        </div>
+        <p class="adm-subtitulo"><span class="adm-chip adm-chip--verde">Común a todas las empresas</span></p>
+      </header>
+
+      <div class="adm-tarjeta">
+        <div class="adm-tabla-scroll">
+          <table class="adm-tabla">
+            <thead><tr><th scope="col">Empresa</th><th scope="col">CIF</th><th scope="col">Plantilla</th><th scope="col">Estado</th><th scope="col">Acción</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Software Málaga S.L.</strong></td><td>[CIF]</td><td>80</td><td><span class="adm-chip adm-chip--verde">Activa</span></td><td><button type="button" class="adm-enlace" data-drawer="empresa" data-titulo="Editar empresa" data-valor="Software Málaga S.L.">Editar<span class="sr-only"> Software Málaga S.L.</span></button></td></tr>
+              <tr><td><strong>Datos Sur S.A.</strong></td><td>[CIF]</td><td>150</td><td><span class="adm-chip adm-chip--verde">Activa</span></td><td><button type="button" class="adm-enlace" data-drawer="empresa" data-titulo="Editar empresa" data-valor="Datos Sur S.A.">Editar<span class="sr-only"> Datos Sur S.A.</span></button></td></tr>
+              <tr><td><strong>Consultora Norte S.L.</strong></td><td>[CIF]</td><td>320</td><td><span class="adm-chip adm-chip--gris">Inactiva</span></td><td><button type="button" class="adm-enlace" data-drawer="empresa" data-titulo="Editar empresa" data-valor="Consultora Norte S.L.">Editar<span class="sr-only"> Consultora Norte S.L.</span></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="adm-sin-resultados js-vacio" hidden>No hay resultados para esa búsqueda.</p>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="adm-seccion" id="catalogo" data-nombre="Catálogo" aria-labelledby="t-catalogo" hidden>
+      <header class="adm-cabecera">
+        <nav class="adm-migas" aria-label="Ruta de navegación"><ol><li>Global</li><li><span aria-current="page">Catálogo</span></li></ol></nav>
+        <div class="adm-cabecera__fila">
+          <h1 class="adm-titulo" id="t-catalogo" tabindex="-1">Catálogo <span class="adm-rn">RN16 · RN39 · RN41</span></h1>
+          <div class="adm-acciones">
+            <div class="adm-buscador">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <label class="sr-only" for="buscar-catalogo">Buscar en el catálogo</label>
+              <input type="search" id="buscar-catalogo" placeholder="Buscar curso o ruta" data-buscar>
+            </div>
+            <button type="button" class="adm-boton adm-boton--secundario">Importar CSV</button>
+            <button type="button" class="adm-boton" data-drawer="curso" data-titulo="Nuevo curso">+ Nuevo curso</button>
+            <button type="button" class="adm-boton" data-drawer="ruta" data-titulo="Nueva ruta">+ Nueva ruta</button>
+          </div>
+        </div>
+        <p class="adm-subtitulo"><span class="adm-chip adm-chip--verde">Catálogo común a todas las empresas</span></p>
+      </header>
+
+      <div class="adm-tarjeta">
+        <div class="adm-pestanas" role="tablist" aria-label="Catálogo">
+          <button type="button" class="adm-pestana" role="tab" id="tab-cursos" aria-controls="panel-cursos" aria-selected="true">Cursos</button>
+          <button type="button" class="adm-pestana" role="tab" id="tab-rutas" aria-controls="panel-rutas" aria-selected="false" tabindex="-1">Rutas</button>
+        </div>
+
+        <div class="adm-panel" role="tabpanel" id="panel-cursos" aria-labelledby="tab-cursos" tabindex="0">
+          <div class="adm-tabla-scroll">
+            <table class="adm-tabla" style="min-width: 820px">
+              <thead><tr><th scope="col">Curso</th><th scope="col">Rol</th><th scope="col">Horas</th><th scope="col">URL</th><th scope="col">Competencias</th><th scope="col">Acción</th></tr></thead>
+              <tbody>
+                <tr><td>Docker y contenedores</td><td>Desarrollo backend</td><td>6</td><td><a href="#" target="_blank" rel="noopener noreferrer" class="adm-enlace">Ver web<span class="sr-only"> del curso Docker y contenedores (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></td><td>Docker</td><td><button type="button" class="adm-enlace" data-drawer="curso" data-titulo="Editar curso" data-valor="Docker y contenedores">Editar<span class="sr-only"> Docker y contenedores</span></button></td></tr>
+                <tr><td>GitHub Copilot para desarrollo</td><td>Desarrollo backend</td><td>4</td><td><a href="https://github.com/skills/getting-started-with-github-copilot" target="_blank" rel="noopener noreferrer" class="adm-enlace">Ver web<span class="sr-only"> del curso GitHub Copilot para desarrollo (se abre en una pestaña nueva)</span></a></td><td>GitHub Copilot</td><td><button type="button" class="adm-enlace" data-drawer="curso" data-titulo="Editar curso" data-valor="GitHub Copilot para desarrollo">Editar<span class="sr-only"> GitHub Copilot para desarrollo</span></button></td></tr>
+                <tr><td>APIs con FastAPI</td><td>Desarrollo backend</td><td>8</td><td><a href="https://fastapi.tiangolo.com/tutorial/" target="_blank" rel="noopener noreferrer" class="adm-enlace">Ver web<span class="sr-only"> del curso APIs con FastAPI (se abre en una pestaña nueva)</span></a></td><td>Python, APIs REST</td><td><button type="button" class="adm-enlace" data-drawer="curso" data-titulo="Editar curso" data-valor="APIs con FastAPI">Editar<span class="sr-only"> APIs con FastAPI</span></button></td></tr>
+                <tr><td>Power BI avanzado</td><td>Data</td><td>10</td><td><a href="#" target="_blank" rel="noopener noreferrer" class="adm-enlace">Ver web<span class="sr-only"> del curso Power BI avanzado (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></td><td>Power BI, DAX</td><td><button type="button" class="adm-enlace" data-drawer="curso" data-titulo="Editar curso" data-valor="Power BI avanzado">Editar<span class="sr-only"> Power BI avanzado</span></button></td></tr>
+                <tr><td>Testing automatizado</td><td>QA</td><td>8</td><td><a href="#" target="_blank" rel="noopener noreferrer" class="adm-enlace">Ver web<span class="sr-only"> del curso Testing automatizado (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></td><td>Testing</td><td><button type="button" class="adm-enlace" data-drawer="curso" data-titulo="Editar curso" data-valor="Testing automatizado">Editar<span class="sr-only"> Testing automatizado</span></button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="adm-panel" role="tabpanel" id="panel-rutas" aria-labelledby="tab-rutas" tabindex="0" hidden>
+          <div class="adm-rutas">
+            <article class="adm-ruta">
+              <div class="adm-ruta__cabeza">
+                <div>
+                  <h2 class="adm-ruta__titulo">Backend moderno</h2>
+                  <p class="adm-ruta__meta">Desarrollo backend · 3 cursos · 18 h</p>
+                </div>
+                <button type="button" class="adm-enlace" data-drawer="ruta" data-titulo="Editar ruta" data-valor="Backend moderno">Editar<span class="sr-only"> ruta Backend moderno</span></button>
+              </div>
+              <ol aria-label="Cursos de Backend moderno, en orden">
+                <li>Docker y contenedores <svg class="adm-arrastrar" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg></li>
+                <li>GitHub Copilot para desarrollo <svg class="adm-arrastrar" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg></li>
+                <li>APIs con FastAPI <svg class="adm-arrastrar" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg></li>
+              </ol>
+            </article>
+            <article class="adm-ruta">
+              <div class="adm-ruta__cabeza">
+                <div>
+                  <h2 class="adm-ruta__titulo">Data Analyst</h2>
+                  <p class="adm-ruta__meta">Data · 1 curso · 10 h</p>
+                </div>
+                <button type="button" class="adm-enlace" data-drawer="ruta" data-titulo="Editar ruta" data-valor="Data Analyst">Editar<span class="sr-only"> ruta Data Analyst</span></button>
+              </div>
+              <ol aria-label="Cursos de Data Analyst, en orden">
+                <li>Power BI avanzado <svg class="adm-arrastrar" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg></li>
+              </ol>
+            </article>
+            <article class="adm-ruta">
+              <div class="adm-ruta__cabeza">
+                <div>
+                  <h2 class="adm-ruta__titulo">QA y testing</h2>
+                  <p class="adm-ruta__meta">QA · 1 curso · 8 h</p>
+                </div>
+                <button type="button" class="adm-enlace" data-drawer="ruta" data-titulo="Editar ruta" data-valor="QA y testing">Editar<span class="sr-only"> ruta QA y testing</span></button>
+              </div>
+              <ol aria-label="Cursos de QA y testing, en orden">
+                <li>Testing automatizado <svg class="adm-arrastrar" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg></li>
+              </ol>
+            </article>
+          </div>
+        </div>
+        <p class="adm-sin-resultados js-vacio" hidden>No hay resultados para esa búsqueda.</p>
+      </div>
+    </section>
+
+    <!-- MENTORAS EXTERNAS -->
+    <section class="adm-seccion" id="externas" data-nombre="Mentoras externas" aria-labelledby="t-externas" hidden>
+      <header class="adm-cabecera">
+        <nav class="adm-migas" aria-label="Ruta de navegación"><ol><li>Global</li><li><span aria-current="page">Mentoras externas</span></li></ol></nav>
+        <div class="adm-cabecera__fila">
+          <h1 class="adm-titulo" id="t-externas" tabindex="-1">Mentoras externas <span class="adm-rn">RN17 · RN18 · RN35</span></h1>
+          <div class="adm-acciones">
+            <div class="adm-buscador">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <label class="sr-only" for="buscar-externas">Buscar mentoras externas</label>
+              <input type="search" id="buscar-externas" placeholder="Buscar mentora" data-buscar>
+            </div>
+            <button type="button" class="adm-boton" data-drawer="mentora" data-titulo="Nueva mentora externa">+ Nueva mentora externa</button>
+          </div>
+        </div>
+        <p class="adm-subtitulo">Disponibles para todas las empresas. Se incentivan con certificados.</p>
+      </header>
+
+      <div class="adm-tarjeta">
+        <div class="adm-tabla-scroll">
+          <table class="adm-tabla" style="min-width: 760px">
+            <thead><tr><th scope="col">Nombre</th><th scope="col">Resumen profesional</th><th scope="col">Correo</th><th scope="col">Certificado</th><th scope="col">Acción</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Carmen S.</strong></td><td>Data Scientist, mentora en comunidades tech</td><td>carmen@ejemplo.com</td><td><button type="button" class="adm-boton adm-boton--secundario">Emitir certificado<span class="sr-only"> para Carmen S.</span></button></td><td><button type="button" class="adm-enlace" data-drawer="mentora" data-titulo="Editar mentora externa" data-valor="Carmen S.">Editar<span class="sr-only"> a Carmen S.</span></button></td></tr>
+              <tr><td><strong>Pilar N.</strong></td><td>Product Manager, 10 años en fintech</td><td>pilar@ejemplo.com</td><td><button type="button" class="adm-boton adm-boton--secundario">Emitir certificado<span class="sr-only"> para Pilar N.</span></button></td><td><button type="button" class="adm-enlace" data-drawer="mentora" data-titulo="Editar mentora externa" data-valor="Pilar N.">Editar<span class="sr-only"> a Pilar N.</span></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="adm-sin-resultados js-vacio" hidden>No hay resultados para esa búsqueda.</p>
       </div>
     </section>
 
   </main>
 </div>
+
+<!-- ============ PANEL LATERAL (DRAWER) ============ -->
+<dialog class="adm-drawer" id="drawer" aria-labelledby="drawer-titulo">
+  <form method="dialog">
+    <div class="adm-drawer__cabeza">
+      <h2 class="adm-drawer__titulo" id="drawer-titulo">Editar</h2>
+      <button type="button" class="adm-drawer__cerrar js-cerrar" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="adm-drawer__cuerpo" id="drawer-cuerpo"></div>
+    <div class="adm-drawer__pie">
+      <button type="button" class="adm-boton adm-boton--secundario js-cerrar">Cancelar</button>
+      <button type="submit" class="adm-boton" value="guardar">Guardar</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Formularios de ejemplo que se cargan en el panel -->
+<template id="form-persona">
+  <div class="adm-campo"><label for="f-nombre">Nombre</label><input id="f-nombre" type="text" autocomplete="off"></div>
+  <div class="adm-campo"><label for="f-correo">Correo</label><input id="f-correo" type="email" autocomplete="off"></div>
+  <div class="adm-campo"><label for="f-rol">Rol</label><select id="f-rol"><option>Usuaria</option><option>RRHH</option><option>Mentora</option><option>Admin</option></select></div>
+</template>
+<template id="form-mentora">
+  <div class="adm-campo"><label for="f-nombre">Nombre</label><input id="f-nombre" type="text" autocomplete="off"></div>
+  <div class="adm-campo"><label for="f-resumen">Resumen profesional</label><textarea id="f-resumen"></textarea></div>
+  <div class="adm-campo"><label for="f-correo">Correo de contacto</label><input id="f-correo" type="email" autocomplete="off"></div>
+</template>
+<template id="form-empresa">
+  <div class="adm-campo"><label for="f-nombre">Nombre</label><input id="f-nombre" type="text" autocomplete="off"></div>
+  <div class="adm-campo"><label for="f-cif">CIF</label><input id="f-cif" type="text" autocomplete="off"></div>
+  <div class="adm-campo"><label for="f-plantilla">Personas en plantilla</label><input id="f-plantilla" type="number" min="0"></div>
+  <div class="adm-campo"><label for="f-estado">Estado</label><select id="f-estado"><option>Activa</option><option>Inactiva</option></select></div>
+</template>
+<template id="form-curso">
+  <div class="adm-campo"><label for="f-nombre">Nombre del curso</label><input id="f-nombre" type="text" autocomplete="off"></div>
+  <div class="adm-campo"><label for="f-rol">Rol</label><select id="f-rol"><option>Desarrollo backend</option><option>Data</option><option>QA</option></select></div>
+  <div class="adm-campo"><label for="f-horas">Horas</label><input id="f-horas" type="number" min="0"></div>
+  <div class="adm-campo"><label for="f-url">URL del curso</label><input id="f-url" type="url" placeholder="https://"></div>
+  <div class="adm-campo"><label for="f-proveedor">Proveedor</label><select id="f-proveedor"><option>Catálogo empresa</option><option>Externo</option></select></div>
+  <div class="adm-campo"><label for="f-competencias">Competencias</label><input id="f-competencias" type="text" placeholder="Separadas por comas"></div>
+</template>
+<template id="form-ruta">
+  <div class="adm-campo"><label for="f-nombre">Nombre de la ruta</label><input id="f-nombre" type="text" autocomplete="off"></div>
+  <div class="adm-campo"><label for="f-rol">Rol</label><select id="f-rol"><option>Desarrollo backend</option><option>Data</option><option>QA</option></select></div>
+  <div class="adm-campo"><label for="f-cursos">Cursos (en orden)</label><textarea id="f-cursos" placeholder="Un curso por línea"></textarea></div>
+</template>
+
+<p class="adm-aviso" role="status" aria-live="polite"></p>
+
+<script>
+(function () {
+  /* ---------- Navegación por secciones (hash) ---------- */
+  var secciones = Array.prototype.slice.call(document.querySelectorAll('.adm-seccion'));
+  var enlaces = document.querySelectorAll('.adm-menu__enlace');
+  var menu = document.getElementById('adm-menu');
+  var menuBoton = document.querySelector('.adm-menu-boton');
+  var menuActual = document.getElementById('adm-menu-actual');
+
+  function mostrar(id, moverFoco) {
+    var destino = secciones.filter(function (s) { return s.id === id; })[0] || secciones[0];
+    secciones.forEach(function (s) { s.hidden = s !== destino; });
+    enlaces.forEach(function (a) {
+      if (a.getAttribute('href') === '#' + destino.id) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+    var nombre = destino.getAttribute('data-nombre');
+    menuActual.textContent = nombre;
+    document.title = '4oo · Admin · ' + nombre;
+    cerrarMenu();
+    window.scrollTo(0, 0);
+    if (moverFoco) destino.querySelector('.adm-titulo').focus();
+  }
+
+  window.addEventListener('hashchange', function () {
+    mostrar(location.hash.slice(1), true);
+  });
+  mostrar(location.hash.slice(1) || 'resumen', false);
+  // Evita el salto del navegador al ancla al cargar con un hash
+  window.addEventListener('load', function () { window.scrollTo(0, 0); });
+
+  /* ---------- Menú desplegable en móvil ---------- */
+  function cerrarMenu() {
+    menu.classList.remove('is-abierto');
+    menuBoton.setAttribute('aria-expanded', 'false');
+  }
+  menuBoton.addEventListener('click', function () {
+    var abierto = menu.classList.toggle('is-abierto');
+    menuBoton.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+  });
+
+  /* ---------- Selector de empresa ---------- */
+  var empresa = document.getElementById('empresa');
+  empresa.addEventListener('change', function () {
+    document.querySelectorAll('.js-empresa').forEach(function (el) {
+      el.textContent = empresa.value;
+    });
+  });
+
+  /* ---------- Buscador: filtra filas y rutas de la sección ---------- */
+  function normalizar(t) {
+    return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+  document.querySelectorAll('[data-buscar]').forEach(function (input) {
+    var seccion = input.closest('.adm-seccion');
+    input.addEventListener('input', function () {
+      var q = normalizar(input.value.trim());
+      var visibles = 0;
+      seccion.querySelectorAll('tbody tr, .adm-ruta').forEach(function (fila) {
+        var ok = normalizar(fila.textContent).indexOf(q) !== -1;
+        fila.hidden = !ok;
+        if (ok && !fila.closest('.adm-panel[hidden]')) visibles++;
+      });
+      var vacio = seccion.querySelector('.js-vacio');
+      if (vacio) vacio.hidden = visibles > 0;
+    });
+  });
+
+  /* ---------- Pestañas del catálogo ---------- */
+  var pestanas = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function activar(tab, foco) {
+    pestanas.forEach(function (t) {
+      var sel = t === tab;
+      t.setAttribute('aria-selected', sel ? 'true' : 'false');
+      t.tabIndex = sel ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !sel;
+    });
+    if (foco) tab.focus();
+  }
+  pestanas.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { activar(tab, false); });
+    tab.addEventListener('keydown', function (e) {
+      var n = null;
+      if (e.key === 'ArrowRight') n = pestanas[(i + 1) % pestanas.length];
+      if (e.key === 'ArrowLeft') n = pestanas[(i - 1 + pestanas.length) % pestanas.length];
+      if (e.key === 'Home') n = pestanas[0];
+      if (e.key === 'End') n = pestanas[pestanas.length - 1];
+      if (n) { e.preventDefault(); activar(n, true); }
+    });
+  });
+
+  /* ---------- Panel lateral (drawer) ---------- */
+  var drawer = document.getElementById('drawer');
+  var cuerpo = document.getElementById('drawer-cuerpo');
+  var tituloDrawer = document.getElementById('drawer-titulo');
+  var aviso = document.querySelector('.adm-aviso');
+  var avisoTimer;
+
+  document.addEventListener('click', function (e) {
+    var boton = e.target.closest('[data-drawer]');
+    if (!boton) return;
+    var plantilla = document.getElementById('form-' + boton.getAttribute('data-drawer'));
+    tituloDrawer.textContent = boton.getAttribute('data-titulo');
+    cuerpo.innerHTML = '';
+    cuerpo.appendChild(plantilla.content.cloneNode(true));
+    var valor = boton.getAttribute('data-valor');
+    if (valor) cuerpo.querySelector('#f-nombre').value = valor;
+    drawer.returnValue = '';
+    drawer.showModal();
+    cuerpo.querySelector('input, select, textarea').focus();
+  });
+
+  drawer.querySelectorAll('.js-cerrar').forEach(function (b) {
+    b.addEventListener('click', function () { drawer.close('cancelar'); });
+  });
+  // Clic en el fondo oscuro
+  drawer.addEventListener('click', function (e) {
+    if (e.target === drawer) drawer.close('cancelar');
+  });
+  drawer.addEventListener('close', function () {
+    if (drawer.returnValue === 'guardar') {
+      aviso.textContent = 'Cambios guardados (demo).';
+      clearTimeout(avisoTimer);
+      avisoTimer = setTimeout(function () { aviso.textContent = ''; }, 3000);
+    }
+  });
+})();
+</script>
 </body>
 </html>

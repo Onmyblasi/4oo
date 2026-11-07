@@ -97,8 +97,113 @@ body {
   text-decoration: none;
 }
 
+.boton-cuenta {
+  background: none;
+  font-family: var(--fuente-texto);
+  cursor: pointer;
+}
+
 .boton-cuenta:hover {
   background: var(--blanco);
+}
+
+/* ---------- Ventana de acceso ---------- */
+.acceso {
+  width: min(400px, calc(100% - 32px));
+  padding: 0;
+  border: 1px solid var(--borde);
+  border-radius: 24px;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+.acceso::backdrop {
+  background: rgba(58, 28, 61, 0.5);
+}
+
+.acceso__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.acceso__cerrar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--texto);
+  cursor: pointer;
+}
+
+.acceso__cerrar:hover {
+  background: var(--blanco);
+}
+
+.acceso__titulo {
+  margin: 0 0 24px;
+  font-family: var(--fuente-titulos);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.acceso__etiqueta {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.acceso__campo {
+  min-height: 44px;
+  margin-bottom: 16px;
+  padding: 0 16px;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  background: var(--blanco);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+}
+
+.acceso__campo:focus-visible,
+.acceso__ingresar:focus-visible,
+.acceso__olvido:focus-visible,
+.acceso__cerrar:focus-visible {
+  outline: 3px solid var(--morado);
+  outline-offset: 2px;
+}
+
+.acceso__ingresar {
+  min-height: 48px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--texto);
+  color: var(--blanco);
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.acceso__ingresar:hover {
+  filter: brightness(1.2);
+}
+
+.acceso__olvido {
+  align-self: center;
+  margin-top: 16px;
+  padding: 8px;
+  color: var(--texto-suave);
+  font-size: 14px;
 }
 
 /* ---------- Título de la página ---------- */
