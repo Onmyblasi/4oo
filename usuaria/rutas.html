@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · Rutas y cursos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="app" data-perfil="usuaria" data-pagina="rutas">
+<script src="../js/layout.js"></script>
+
+<main id="contenido" class="page">
+  <h1 class="page-title">Rutas y cursos</h1>
+
+  <section class="card" aria-labelledby="rutas-title">
+    <div class="page-head">
+      <h2 id="rutas-title" class="card__title">Ejemplos de rutas</h2>
+      <div class="field">
+        <label for="perfil">Perfil laboral</label>
+        <select id="perfil" class="select">
+          <option>Desarrollo backend</option>
+          <option>Data</option>
+          <option>QA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+          <div class="option" style="padding: 16px">
+            <div style="font-weight: 600">Backend moderno</div>
+            <div class="muted">8 cursos · 2 h/semana · 4 meses</div>
+          </div>
+          <div class="option" style="padding: 16px">
+            <div style="font-weight: 600">Cloud y DevOps básico</div>
+            <div class="muted">6 cursos · 2 h/semana · 3 meses</div>
+          </div>
+        </div>
+    <h3 style="margin: 8px 0 0; font-size: 16px">Cursos recomendados para tu rol</h3>
+    <ul class="list">
+      <li class="list-item"><a class="course-link" href="#" target="_blank" rel="noopener noreferrer">Docker y contenedores<span class="sr-only"> (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --><span class="muted">6 h · Catálogo empresa</span></li>
+      <li class="list-item"><a class="course-link" href="#" target="_blank" rel="noopener noreferrer">Testing automatizado<span class="sr-only"> (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --><span class="muted">8 h · Catálogo empresa</span></li>
+      <li class="list-item"><a class="course-link" href="https://github.com/skills/hello-github-actions" target="_blank" rel="noopener noreferrer">CI/CD con GitHub Actions<span class="sr-only"> (se abre en una pestaña nueva)</span></a><span class="muted">5 h · Externo gratuito · GitHub Skills</span></li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

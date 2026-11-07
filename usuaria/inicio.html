@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · Inicio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="app" data-perfil="usuaria" data-pagina="inicio">
+<script src="../js/layout.js"></script>
+
+<main id="contenido" class="page">
+  <h1 class="page-title">Inicio</h1>
+
+  <section class="card" aria-labelledby="sim-title">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Simulador</p>
+        <h2 id="sim-title" class="card__title">¿Qué pasaría si reduzco jornada o pido excedencia?</h2>
+      </div>
+      <div class="field">
+        <label for="sal">Tu salario bruto mensual</label>
+        <input id="sal" class="input" type="text" value="2.400 €" style="width: 160px">
+      </div>
+    </div>
+      <div class="row">
+        <div class="option">
+          <h3>Reducción 25 %</h3>
+          <div class="amount">1.800 €<span> /mes</span></div>
+        </div>
+        <div class="option">
+          <h3>Reducción 50 %</h3>
+          <div class="amount">1.200 €<span> /mes</span></div>
+        </div>
+        <div class="option">
+          <h3>Excedencia</h3>
+          <div class="amount">0 €<span> /mes</span></div>
+        </div>
+      </div>
+      <p role="note" class="note">Cálculo orientativo, no es asesoramiento legal.</p>
+    <div><a class="see-all" href="simulador.html">Ver todo<span class="sr-only"> en el simulador</span>&nbsp;<span aria-hidden="true">→</span></a></div>
+  </section>
+
+  <div class="row">
+    <section class="card card--wide" aria-labelledby="rutas-title">
+      <div class="card__head">
+        <h2 id="rutas-title" class="card__title">Rutas para tu perfil</h2>
+        <a class="see-all" href="rutas.html">Ver todo<span class="sr-only"> en rutas y cursos</span>&nbsp;<span aria-hidden="true">→</span></a>
+      </div>
+        <div class="row">
+          <div class="option" style="padding: 16px">
+            <div style="font-weight: 600">Backend moderno</div>
+            <div class="muted">8 cursos · 2 h/semana · 4 meses</div>
+          </div>
+          <div class="option" style="padding: 16px">
+            <div style="font-weight: 600">Cloud y DevOps básico</div>
+            <div class="muted">6 cursos · 2 h/semana · 3 meses</div>
+          </div>
+        </div>
+    </section>
+
+    <section class="card" aria-labelledby="ment-title">
+      <div class="card__head">
+        <h2 id="ment-title" class="card__title">Conoce a las mentoras</h2>
+        <a class="see-all" href="mentoras.html">Ver todo<span class="sr-only"> en mentoras</span>&nbsp;<span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="list">
+        <li class="list-item">Laura G. <span class="badge">Interna</span></li>
+        <li class="list-item">Carmen S. <span class="badge badge--rosa">Externa</span></li>
+        <li class="list-item">Rocío M. <span class="badge">Interna</span></li>
+      </ul>
+    </section>
+  </div>
+</main>
+</body>
+</html>

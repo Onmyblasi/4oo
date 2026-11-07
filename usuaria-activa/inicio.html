@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · Inicio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="app" data-perfil="usuaria-activa" data-pagina="inicio">
+<script src="../js/layout.js"></script>
+
+<main id="contenido" class="page">
+  <div class="page-head">
+    <h1 class="page-title page-title--lg">Hola, Marta. Tu plan está activo.</h1>
+    <div class="summary" role="group" aria-label="Tu plan">
+      <div class="summary__box"><div class="summary__label">Situación</div><div class="summary__value">Reducción 25 %</div></div>
+      <div class="summary__box"><div class="summary__label">Vuelta prevista</div><div class="summary__value">Nov 2028</div></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <section class="card card--wide" aria-labelledby="ruta-title">
+      <div class="card__head">
+        <h2 id="ruta-title" class="card__title">Mi ruta: Backend moderno</h2>
+        <a class="see-all" href="mi-ruta.html">Ver todo<span class="sr-only"> en mi ruta</span>&nbsp;<span aria-hidden="true">→</span></a>
+      </div>
+    <div>
+      <div class="bar-label"><span>Progreso</span><span style="font-weight: 600">3 de 8 cursos</span></div>
+      <div class="bar" role="progressbar" aria-label="Progreso de la ruta" aria-valuemin="0" aria-valuemax="8" aria-valuenow="3" aria-valuetext="3 de 8 cursos"><div class="bar__fill" style="width: 38%"></div></div>
+      <p class="muted" style="margin-top: 8px">2 h/semana dentro de tu jornada</p>
+    </div>
+      <h3 style="margin: 0; font-size: 15px">Siguiente curso pendiente</h3>
+      <div class="list-item">
+        <span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px"><a class="course-link" href="https://fastapi.tiangolo.com/tutorial/" target="_blank" rel="noopener noreferrer">APIs con FastAPI<span class="sr-only"> (se abre en una pestaña nueva)</span></a><span style="font-size: 12px; color: #555B6B">Externo · Documentación oficial de FastAPI</span></span>
+        <span class="badge" style="background: #EEF0F4; color: #3A3F4C">Pendiente</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="ment-title" style="gap: 14px">
+      <div class="card__head">
+        <h2 id="ment-title" class="card__title">Próxima sesión</h2>
+        <a class="see-all" href="mi-mentora.html">Ver todo<span class="sr-only"> en mi mentora</span>&nbsp;<span aria-hidden="true">→</span></a>
+      </div>
+      <div class="list-item list-item--gris"><span style="font-weight: 600">Jue 14 nov · 9:30</span><span class="list-item__meta">Revisión de ruta · 30 min</span></div>
+      <div style="display: flex; gap: 14px; align-items: center">
+        <span class="avatar avatar--md" aria-hidden="true">L</span>
+        <div>
+          <div style="font-weight: 600">Laura García</div>
+          <div style="font-size: 14px; color: #555B6B">Tech Lead · interna</div>
+          <a href="mailto:laura@ejemplo.com" style="font-size: 14px">laura@ejemplo.com</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="row">
+    <section class="card" aria-labelledby="sal-title" style="gap: 12px">
+      <div class="card__head">
+        <h2 id="sal-title" class="card__title">Mi salario</h2>
+        <a class="see-all" href="mi-salario.html">Ver todo<span class="sr-only"> en mi salario</span>&nbsp;<span aria-hidden="true">→</span></a>
+      </div>
+      <div class="kv"><span>Antes</span><strong>2.400 €/mes</strong></div>
+      <div class="kv"><span>Con reducción 25 %</span><strong>1.800 €/mes</strong></div>
+      <p role="note" class="note">Cálculo orientativo, no es asesoramiento legal.</p>
+    </section>
+
+    <section class="card card--wide" aria-labelledby="pas-title" style="gap: 14px">
+      <div class="card__head">
+        <h2 id="pas-title" class="card__title">Competencias nuevas</h2>
+        <a class="see-all" href="mi-pasaporte.html">Ver todo<span class="sr-only"> en mi pasaporte</span>&nbsp;<span aria-hidden="true">→</span></a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <span class="chip chip--nuevo">Docker · nuevo</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 14px">
+        <div><span style="color: #555B6B">Cursos completados:</span> <strong>3</strong></div>
+        <div><span style="color: #555B6B">Horas de formación:</span> <strong>19 h</strong></div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

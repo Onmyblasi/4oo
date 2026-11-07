@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · Mi ruta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="app" data-perfil="usuaria-activa" data-pagina="mi-ruta">
+<script src="../js/layout.js"></script>
+
+<main id="contenido" class="page">
+  <h1 class="page-title">Mi ruta</h1>
+
+  <section class="card" aria-labelledby="ruta-title">
+    <h2 id="ruta-title" class="card__title">Mi ruta personalizada: Backend moderno</h2>
+    <div>
+      <div class="bar-label"><span>Progreso</span><span style="font-weight: 600">3 de 8 cursos</span></div>
+      <div class="bar" role="progressbar" aria-label="Progreso de la ruta" aria-valuemin="0" aria-valuemax="8" aria-valuenow="3" aria-valuetext="3 de 8 cursos"><div class="bar__fill" style="width: 38%"></div></div>
+      <p class="muted" style="margin-top: 8px">2 h/semana dentro de tu jornada</p>
+    </div>
+    <h3 style="margin: 4px 0 0; font-size: 15px">Marca tu progreso</h3>
+    <ul class="list">
+      <li class="list-item" style="padding: 10px 16px">
+        <span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px"><label for="c1" style="font-weight: 500"><a class="course-link" href="#" target="_blank" rel="noopener noreferrer"><span id="c1-nombre">Docker y contenedores</span><span class="sr-only"> (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></label><span style="font-size: 12px; color: #555B6B">Catálogo empresa</span></span>
+        <select id="c1" class="select" aria-labelledby="c1-nombre" style="border-color: #43D685; background: #D9F7E7; color: #1E3388; font-weight: 600"><option>Completado</option><option>En curso</option><option>Pendiente</option></select>
+      </li>
+      <li class="list-item" style="padding: 10px 16px">
+        <span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px"><label for="c2" style="font-weight: 500"><a class="course-link" href="https://github.com/skills/getting-started-with-github-copilot" target="_blank" rel="noopener noreferrer"><span id="c2-nombre">GitHub Copilot para desarrollo</span><span class="sr-only"> (se abre en una pestaña nueva)</span></a></label><span style="font-size: 12px; color: #555B6B">Externo · GitHub Skills</span></span>
+        <select id="c2" class="select" aria-labelledby="c2-nombre" style="border-color: #E0B52E; background: #FCD042; color: #1E3388; font-weight: 600"><option>En curso</option><option>Completado</option><option>Pendiente</option></select>
+      </li>
+      <li class="list-item" style="padding: 10px 16px">
+        <span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px"><label for="c3" style="font-weight: 500"><a class="course-link" href="https://fastapi.tiangolo.com/tutorial/" target="_blank" rel="noopener noreferrer"><span id="c3-nombre">APIs con FastAPI</span><span class="sr-only"> (se abre en una pestaña nueva)</span></a></label><span style="font-size: 12px; color: #555B6B">Externo · Documentación oficial de FastAPI</span></span>
+        <select id="c3" class="select" aria-labelledby="c3-nombre" style="border-color: #C9CCD6; background: #EEF0F4; color: #3A3F4C; font-weight: 600"><option>Pendiente</option><option>En curso</option><option>Completado</option></select>
+      </li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

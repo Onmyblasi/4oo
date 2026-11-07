@@ -8,6 +8,7 @@
 - [Mentora](#mentora)
 - [Administración](#administración)
 - [Transversal](#transversal)
+- [Estructura del prototipo](#estructura-del-prototipo)
 
 ---
 
@@ -87,3 +88,70 @@
 | RN22 | El simulador muestra el aviso "cálculo orientativo, no es asesoramiento legal". |
 | RN37 | RRHH, mentoras internas y usuarias solo ven los datos de su propia empresa. Solo Administración puede cambiar de empresa. |
 | RN39 | Cada curso de la ruta y de los cursos recomendados tiene un enlace a su web. Se abre en una pestaña nueva e indica el proveedor (catálogo de la empresa o externo). |
+| RN42 | Cada perfil tiene una página de inicio con un resumen de lo más importante y acceso a sus opciones. |
+
+
+---
+
+## Estructura del prototipo
+
+HTML estático, sin frameworks. Cada perfil (salvo Administración) tiene una carpeta con una página por opción del menú. `inicio.html` es la página por defecto de cada perfil.
+
+```
+4oo/
+├── index.html                    Portada (las cuatro áreas y el acceso)
+├── admin.html                    Administración (menú lateral, una sola página)
+├── css/
+│   ├── styles.css                Paleta, tipografía y componentes compartidos
+│   └── admin.css                 Estilos propios de Administración
+├── js/
+│   └── layout.js                 Cabecera, menú y barra del prototipo de cada perfil
+├── usuaria/                      Usuaria sin activación
+│   ├── inicio.html
+│   ├── simulador.html
+│   ├── rutas.html
+│   └── mentoras.html
+├── usuaria-activa/               Usuaria con activación
+│   ├── inicio.html
+│   ├── mi-ruta.html
+│   ├── mi-salario.html
+│   ├── mi-mentora.html
+│   └── mi-pasaporte.html
+├── rrhh/
+│   ├── inicio.html
+│   ├── activaciones.html
+│   ├── indicadores.html
+│   ├── seguimiento.html
+│   └── informe.html
+└── mentora/
+    ├── inicio.html
+    ├── viajeras.html
+    ├── agenda.html
+    └── perfil.html
+```
+
+`usuaria-sin-activacion.html`, `usuaria-con-activacion.html`, `rrhh.html` y `mentora.html` solo redirigen al `inicio.html` de su perfil, para no romper enlaces antiguos.
+
+### Reglas que cubre cada página
+
+| Página | Reglas |
+|--------|--------|
+| `usuaria/inicio.html` | RN42 · simulador compacto (RN2, RN22), rutas (RN4) y mentoras (RN3) |
+| `usuaria/simulador.html` | RN2, RN22 |
+| `usuaria/rutas.html` | RN4, RN5, RN39 |
+| `usuaria/mentoras.html` | RN3 |
+| `usuaria-activa/inicio.html` | RN42 · progreso y siguiente curso (RN6, RN39), próxima sesión (RN9), salario (RN7, RN22) y competencias nuevas (RN8) |
+| `usuaria-activa/mi-ruta.html` | RN6, RN19, RN39 |
+| `usuaria-activa/mi-salario.html` | RN7, RN22 |
+| `usuaria-activa/mi-mentora.html` | RN9 |
+| `usuaria-activa/mi-pasaporte.html` | RN8 |
+| `rrhh/inicio.html` | RN42 · avisos (RN38), indicadores clave (RN20) y accesos a activar plan (RN10) y generar informe (RN30) |
+| `rrhh/activaciones.html` | RN10, RN11 |
+| `rrhh/indicadores.html` | RN20 |
+| `rrhh/seguimiento.html` | RN38 |
+| `rrhh/informe.html` | RN30, RN31 |
+| `mentora/inicio.html` | RN42 · próxima sesión (RN13, RN14), viajeras que necesitan atención (RN12) y acceso a mi perfil (RN15) |
+| `mentora/viajeras.html` | RN12 |
+| `mentora/agenda.html` | RN13, RN14 |
+| `mentora/perfil.html` | RN15 |
+| `admin.html` | RN16–RN18, RN21, RN30, RN31, RN33–RN37, RN39–RN41 |

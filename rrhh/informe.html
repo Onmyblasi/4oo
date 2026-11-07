@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · RRHH · Informe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="app" data-perfil="rrhh" data-pagina="informe">
+<script src="../js/layout.js"></script>
+
+<main id="contenido" class="page">
+  <div class="page-head">
+    <h1 class="page-title">Informe de formación</h1>
+    <div class="actions">
+      <button type="button" class="btn-secondary">Exportar Excel</button>
+      <button type="button" class="btn-primary" style="font-size: 14px; padding: 0 16px">Exportar PDF</button>
+    </div>
+  </div>
+
+  <section class="card" aria-label="Informe" style="gap: 16px">
+    <p class="muted">Evidencia para la Administración Pública: Inspección de Trabajo, plan de igualdad, FUNDAE.</p>
+    <form class="form-row" aria-label="Filtros del informe">
+      <div class="field">
+        <label for="inf-periodo">Periodo</label>
+        <select id="inf-periodo" class="select"><option>Ene–Dic 2026</option><option>Ene–Jun 2026</option></select>
+      </div>
+      <div class="field">
+        <label for="inf-sit">Situación</label>
+        <select id="inf-sit" class="select"><option>Todas</option><option>Reducción de jornada</option><option>Excedencia</option></select>
+      </div>
+      <div class="field">
+        <label for="inf-sexo">Sexo</label>
+        <select id="inf-sexo" class="select"><option>Todos</option><option>Mujer</option><option>Hombre</option></select>
+      </div>
+    </form>
+    <div class="table-scroll">
+      <table class="table">
+        <thead><tr><th scope="col">Persona</th><th scope="col">Situación</th><th scope="col">Curso</th><th scope="col">Horas</th><th scope="col">Finalizado</th><th scope="col">Competencias</th></tr></thead>
+        <tbody>
+          <tr><td>Marta R.</td><td>Reducción 25 %</td><td>Docker y contenedores</td><td>6</td><td>12/03/2026</td><td>Docker</td></tr>
+          <tr><td>Andrea P.</td><td>Excedencia</td><td>Power BI avanzado</td><td>10</td><td>28/05/2026</td><td>Power BI, DAX</td></tr>
+          <tr><td>Javier L.</td><td>Reducción 20 %</td><td>Testing automatizado</td><td>8</td><td>03/09/2026</td><td>Testing</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">Total: 3 personas · 3 cursos · 24 h. Datos de ejemplo.</p>
+  </section>
+</main>
+</body>
+</html>

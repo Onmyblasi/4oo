@@ -2,124 +2,12 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>4oo · Usuaria sin activación</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<title>4oo · Redirigiendo…</title>
+<meta http-equiv="refresh" content="0; url=usuaria/inicio.html">
+<link rel="canonical" href="usuaria/inicio.html">
+<script>location.replace('usuaria/inicio.html');</script>
 </head>
 <body>
-<nav aria-label="Pantallas del prototipo" class="proto-nav">
-  <a href="index.html">← Índice</a>
-  <a href="usuaria-sin-activacion.html">Usuaria (sin activación)</a>
-  <a href="usuaria-con-activacion.html">Usuaria (con activación)</a>
-  <a href="rrhh.html">RRHH</a>
-  <a href="mentora.html">Mentora</a>
-  <a href="admin.html">Administración</a>
-</nav>
-<div style="font-family: Inter, system-ui, sans-serif; color: #1B1F2A; background: #F4F4F4; min-height: 100vh">
-  <header class="cabecera-app">
-    <div class="cabecera-app__fila">
-      <div class="cabecera-app__marca">
-        <a class="marca" href="index.html" aria-label="4oo, ir al inicio">
-          <svg class="marca__logo" viewBox="40 40 284 116" width="88" height="36" aria-hidden="true">
-            <text x="136" y="150" fill="#3A1C3D" font-family="Space Grotesk, sans-serif" font-size="150" text-anchor="end">4</text>
-            <circle cx="186" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
-            <circle cx="282" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
-            <path d="M221.7,122.6 C223,130 236,136 240,150 M246.3,122.6 C245,130 232,136 228,150" fill="none" stroke="#3A1C3D" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-          <span class="marca__lema">For Our Ovaries</span>
-        </a>
-        <span class="cabecera-app__etiqueta">Acceso para toda la plantilla</span>
-      </div>
-      <nav class="cabecera-app__nav" aria-label="Áreas">
-        <a class="cabecera-app__enlace cabecera-app__enlace--activo" href="#simulador" aria-current="page">Simulador</a>
-        <a class="cabecera-app__enlace" href="#rutas">Rutas y cursos</a>
-        <a class="cabecera-app__enlace" href="#mentoras">Mentoras</a>
-      </nav>
-      <div class="cabecera-app__usuaria">
-        <span class="cabecera-app__avatar" aria-hidden="true">M</span>
-        Marta
-      </div>
-    </div>
-  </header>
-
-  <main style="max-width: 1200px; margin: 0 auto; padding: 32px; display: flex; flex-direction: column; gap: 28px">
-    <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; background: #FFFFFF; border: 1px dashed #C9CCD6; border-radius: 12px; padding: 16px 20px">
-      <p style="margin: 0; font-size: 15px">Modo exploración: aún no tienes una excedencia o reducción de jornada activada.</p>
-      <span style="font-size: 13px; color: #555B6B">La activa RRHH cuando la solicitas.</span>
-    </div>
-
-    <section id="simulador" aria-labelledby="sim-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 20px">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: flex-end">
-        <div>
-          <p style="margin: 0 0 4px; font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em">Simulador</p>
-          <h1 id="sim-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 28px">¿Qué pasaría si reduzco jornada o pido excedencia?</h1>
-        </div>
-        <div style="display: flex; flex-direction: column; gap: 4px">
-          <label for="sal" style="font-size: 13px; color: #555B6B">Tu salario bruto mensual</label>
-          <input id="sal" type="text" value="2.400 €" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 15px; width: 160px; box-sizing: border-box">
-        </div>
-      </div>
-      <div style="display: flex; flex-wrap: wrap; gap: 16px">
-        <div style="flex: 1 1 200px; border: 1px solid #E2E4EA; border-radius: 12px; padding: 18px">
-          <h2 style="margin: 0 0 8px; font-size: 16px">Reducción 25 %</h2>
-          <div style="font-family: Roboto, sans-serif; font-size: 28px; font-weight: 700">1.800 €<span style="font-size: 14px; font-weight: 500; color: #555B6B"> /mes</span></div>
-        </div>
-        <div style="flex: 1 1 200px; border: 1px solid #E2E4EA; border-radius: 12px; padding: 18px">
-          <h2 style="margin: 0 0 8px; font-size: 16px">Reducción 50 %</h2>
-          <div style="font-family: Roboto, sans-serif; font-size: 28px; font-weight: 700">1.200 €<span style="font-size: 14px; font-weight: 500; color: #555B6B"> /mes</span></div>
-        </div>
-        <div style="flex: 1 1 200px; border: 1px solid #E2E4EA; border-radius: 12px; padding: 18px">
-          <h2 style="margin: 0 0 8px; font-size: 16px">Excedencia</h2>
-          <div style="font-family: Roboto, sans-serif; font-size: 28px; font-weight: 700">0 €<span style="font-size: 14px; font-weight: 500; color: #555B6B"> /mes</span></div>
-        </div>
-      </div>
-      <p role="note" style="margin: 0; font-size: 13px; color: #555B6B; background: #F4F4F4; border-radius: 8px; padding: 10px 12px">Cálculo orientativo, no es asesoramiento legal.</p>
-    </section>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 24px">
-      <section id="rutas" aria-labelledby="rutas-title" style="flex: 2 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: flex-end">
-          <h2 id="rutas-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Ejemplos de rutas</h2>
-          <div style="display: flex; flex-direction: column; gap: 4px">
-            <label for="perfil" style="font-size: 13px; color: #555B6B">Perfil laboral</label>
-            <select id="perfil" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF">
-              <option>Desarrollo backend</option>
-              <option>Data</option>
-              <option>QA</option>
-            </select>
-          </div>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 12px">
-          <div style="flex: 1 1 220px; border: 1px solid #E2E4EA; border-radius: 12px; padding: 16px">
-            <div style="font-weight: 600">Backend moderno</div>
-            <div style="font-size: 13px; color: #555B6B">8 cursos · 2 h/semana · 4 meses</div>
-          </div>
-          <div style="flex: 1 1 220px; border: 1px solid #E2E4EA; border-radius: 12px; padding: 16px">
-            <div style="font-weight: 600">Cloud y DevOps básico</div>
-            <div style="font-size: 13px; color: #555B6B">6 cursos · 2 h/semana · 3 meses</div>
-          </div>
-        </div>
-        <h3 style="margin: 8px 0 0; font-size: 16px">Cursos recomendados para tu rol</h3>
-        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
-          <li style="padding: 12px 16px; border: 1px solid #E2E4EA; border-radius: 10px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><span style="font-weight: 500"><a href="#" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px">Docker y contenedores<span class="sr-only"> (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></span><span style="font-size: 13px; color: #555B6B">6 h · Catálogo empresa</span></li>
-          <li style="padding: 12px 16px; border: 1px solid #E2E4EA; border-radius: 10px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><span style="font-weight: 500"><a href="#" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px">Testing automatizado<span class="sr-only"> (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></span><span style="font-size: 13px; color: #555B6B">8 h · Catálogo empresa</span></li>
-          <li style="padding: 12px 16px; border: 1px solid #E2E4EA; border-radius: 10px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap"><span style="font-weight: 500"><a href="https://github.com/skills/hello-github-actions" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px">CI/CD con GitHub Actions<span class="sr-only"> (se abre en una pestaña nueva)</span></a></span><span style="font-size: 13px; color: #555B6B">5 h · Externo gratuito · GitHub Skills</span></li>
-        </ul>
-      </section>
-
-      <section id="mentoras" aria-labelledby="ment-title" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
-        <h2 id="ment-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Mentoras</h2>
-        <p style="margin: 0; font-size: 13px; color: #555B6B">Nombre corto y resumen. El contacto se ve al activar tu plan.</p>
-        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
-          <li style="display: flex; align-items: flex-start; gap: 12px; padding: 12px; border: 1px solid #E2E4EA; border-radius: 10px"><span aria-hidden="true" style="flex: 0 0 36px; width: 36px; height: 36px; border-radius: 50%; background: #FBE3F1; color: #1E3388; display: flex; align-items: center; justify-content: center; font-weight: 700">L</span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">Laura G. <span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #D9F7E7; padding: 2px 8px; border-radius: 999px">Interna</span></span><span style="font-size: 13px; color: #3A3F4C; line-height: 1.4">Tech Lead backend. Volvió de excedencia en 2024.</span></span></li>
-          <li style="display: flex; align-items: flex-start; gap: 12px; padding: 12px; border: 1px solid #E2E4EA; border-radius: 10px"><span aria-hidden="true" style="flex: 0 0 36px; width: 36px; height: 36px; border-radius: 50%; background: #D9F7E7; color: #1E3388; display: flex; align-items: center; justify-content: center; font-weight: 700">C</span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">Carmen S. <span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #FBE3F1; padding: 2px 8px; border-radius: 999px">Externa</span></span><span style="font-size: 13px; color: #3A3F4C; line-height: 1.4">Data Scientist. Mentora en comunidades tech.</span></span></li>
-          <li style="display: flex; align-items: flex-start; gap: 12px; padding: 12px; border: 1px solid #E2E4EA; border-radius: 10px"><span aria-hidden="true" style="flex: 0 0 36px; width: 36px; height: 36px; border-radius: 50%; background: #EFE5FF; color: #1E3388; display: flex; align-items: center; justify-content: center; font-weight: 700">R</span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 600">Rocío M. <span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #D9F7E7; padding: 2px 8px; border-radius: 999px">Interna</span></span><span style="font-size: 13px; color: #3A3F4C; line-height: 1.4">QA Lead. Experta en testing automatizado.</span></span></li>
-        </ul>
-      </section>
-    </div>
-  </main>
-</div>
+<p>Esta página se ha movido. <a href="usuaria/inicio.html">Ir a la nueva página</a>.</p>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · Simulador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="app" data-perfil="usuaria" data-pagina="simulador">
+<script src="../js/layout.js"></script>
+
+<main id="contenido" class="page">
+  <section class="card" aria-labelledby="sim-title" style="gap: 20px">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Simulador</p>
+        <h1 id="sim-title" class="page-title" style="font-size: 28px">¿Qué pasaría si reduzco jornada o pido excedencia?</h1>
+      </div>
+      <div class="field">
+        <label for="sal">Tu salario bruto mensual</label>
+        <input id="sal" class="input" type="text" value="2.400 €" style="width: 160px">
+      </div>
+    </div>
+      <div class="row">
+        <div class="option">
+          <h2>Reducción 25 %</h2>
+          <div class="amount">1.800 €<span> /mes</span></div>
+        </div>
+        <div class="option">
+          <h2>Reducción 50 %</h2>
+          <div class="amount">1.200 €<span> /mes</span></div>
+        </div>
+        <div class="option">
+          <h2>Excedencia</h2>
+          <div class="amount">0 €<span> /mes</span></div>
+        </div>
+      </div>
+      <p role="note" class="note">Cálculo orientativo, no es asesoramiento legal.</p>
+  </section>
+</main>
+</body>
+</html>

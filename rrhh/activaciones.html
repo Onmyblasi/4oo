@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · RRHH · Activaciones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="app" data-perfil="rrhh" data-pagina="activaciones">
+<script src="../js/layout.js"></script>
+
+<main id="contenido" class="page">
+  <h1 class="page-title">Activaciones</h1>
+
+  <section class="card" aria-labelledby="act-title" style="gap: 20px">
+    <h2 id="act-title" class="card__title card__title--sm">Activar excedencia o reducción y asignar mentora</h2>
+    <form class="form-row">
+      <div class="field" style="flex: 1 1 200px">
+        <label for="persona">Persona</label>
+        <select id="persona" class="select"><option>Marta R.</option><option>Andrea P.</option><option>Javier L.</option></select>
+      </div>
+      <div class="field" style="flex: 1 1 180px">
+        <label for="tipo">Tipo</label>
+        <select id="tipo" class="select"><option>Reducción de jornada</option><option>Excedencia</option></select>
+      </div>
+      <div class="field" style="flex: 0 1 120px">
+        <label for="pct">% reducción</label>
+        <input id="pct" class="input" type="text" value="25 %" style="width: 100%">
+      </div>
+      <div class="field" style="flex: 1 1 150px">
+        <label for="ini">Inicio</label>
+        <input id="ini" class="input" type="text" value="01/12/2026" style="width: 100%">
+      </div>
+      <div class="field" style="flex: 1 1 150px">
+        <label for="fin">Vuelta prevista</label>
+        <input id="fin" class="input" type="text" value="30/11/2028" style="width: 100%">
+      </div>
+      <div class="field" style="flex: 1 1 200px">
+        <label for="mentora">Mentora</label>
+        <select id="mentora" class="select"><option>Laura García · interna</option><option>Carmen S. · externa</option><option>Rocío M. · interna</option></select>
+      </div>
+      <button type="button" class="btn-primary">Activar plan</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>

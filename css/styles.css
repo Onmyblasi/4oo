@@ -320,16 +320,53 @@ body {
 .proto-nav a:hover { text-decoration: underline; color: #FFFFFF; }
 
 
-/* ---------- Cabecera de las vistas internas ----------
-   Mismo estilo que la cabecera de la portada. */
-.cabecera-app {
+/* =========================================
+   Vistas de perfil (usuaria, usuaria activa, RRHH, mentora)
+   La cabecera y el menú los inserta js/layout.js.
+   ========================================= */
+
+.app {
+  min-height: 100vh;
+  background: #F4F4F4;
+  color: #1B1F2A;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Enlace para saltar al contenido (visible solo con teclado) */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 100;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--texto);
+  color: var(--blanco);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Foco visible común */
+.app a:focus-visible,
+.app button:focus-visible,
+.app input:focus-visible,
+.app select:focus-visible {
+  outline: 3px solid var(--texto);
+  outline-offset: 2px;
+}
+
+/* ---------- Cabecera ---------- */
+.header {
   background: var(--fondo);
   border-bottom: 1px solid var(--borde);
   color: var(--texto);
   font-family: var(--fuente-texto);
 }
 
-.cabecera-app__fila {
+.header__fila {
   max-width: 1200px;
   margin: 0 auto;
   padding: 16px 32px;
@@ -340,29 +377,19 @@ body {
   gap: 16px;
 }
 
-.cabecera-app__fila--secundaria {
-  padding-top: 0;
-  justify-content: flex-start;
-}
-
-.cabecera-app__fila--secundaria .cabecera-app__enlace {
-  padding: 0 10px;
-  font-size: 14px;
-}
-
-.cabecera-app__marca {
+.header__marca {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px 16px;
 }
 
-.cabecera-app__rol {
+.header__rol {
   font-size: 14px;
   color: var(--texto-suave);
 }
 
-.cabecera-app__etiqueta {
+.header__etiqueta {
   font-size: 11px;
   font-weight: 600;
   color: var(--texto-suave);
@@ -372,31 +399,14 @@ body {
   border-radius: 999px;
 }
 
-.cabecera-app__nav {
+.header__nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
 }
 
-.cabecera-app__grupo {
-  font-family: var(--fuente-titulos);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--texto-suave);
-  margin-right: 4px;
-}
-
-.cabecera-app__separador {
-  width: 1px;
-  height: 24px;
-  background: var(--borde);
-  margin: 0 8px;
-}
-
-.cabecera-app__enlace {
+.nav-link {
   display: flex;
   align-items: center;
   min-height: 44px;
@@ -409,19 +419,19 @@ body {
   text-decoration: none;
 }
 
-.cabecera-app__enlace:hover {
+.nav-link:hover {
   background: var(--blanco);
   border-color: var(--borde);
 }
 
-.cabecera-app__enlace--activo,
-.cabecera-app__enlace--activo:hover {
+.nav-link--active,
+.nav-link--active:hover {
   background: var(--texto);
   border-color: var(--texto);
   color: var(--blanco);
 }
 
-.cabecera-app__usuaria {
+.header__usuaria {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -433,7 +443,7 @@ body {
   font-weight: 600;
 }
 
-.cabecera-app__avatar {
+.header__avatar {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -446,42 +456,513 @@ body {
   background: var(--rosa);
 }
 
-.cabecera-app__selector {
+/* ---------- Estructura de página ---------- */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Franja bajo la cabecera (aviso o resumen compacto) */
+.page-top {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 32px 0;
+}
+
+.page-top + .page {
+  padding-top: 28px;
+}
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.page-title {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.page-title--lg {
+  font-size: 36px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.row > * {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.row > .card--wide {
+  flex: 2 1 520px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ---------- Tarjetas ---------- */
+.card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  background: #FFFFFF;
+  border: 1px solid #E2E4EA;
+  border-radius: 16px;
+}
+
+.card__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+.card__title {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+}
+
+.card__title--sm {
+  font-family: inherit;
+  font-size: 20px;
+}
+
+.see-all {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #1E3388;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.muted {
+  margin: 0;
+  font-size: 13px;
+  color: #555B6B;
+}
+
+.note {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #F4F4F4;
+  color: #555B6B;
+  font-size: 13px;
+}
+
+/* Aviso "modo exploración" */
+.notice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 1px dashed #C9CCD6;
+  border-radius: 12px;
+}
+
+.notice p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Cajas de situación y vuelta prevista */
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.summary__box {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E2E4EA;
+  border-radius: 12px;
+}
+
+.summary__label {
+  font-size: 12px;
+  color: #555B6B;
+}
+
+.summary__value {
+  font-weight: 600;
+}
+
+/* ---------- Etiquetas ---------- */
+.badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #D9F7E7;
+  color: #1E3388;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge--rosa {
+  background: #FBE3F1;
+}
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #EEF0F4;
+  color: #3A3F4C;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.chip--nuevo {
+  background: #D9F7E7;
+  color: #1E3388;
+}
+
+/* ---------- Botones ---------- */
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  border: 0;
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  padding: 0 16px;
+  border: 1px solid #C9CCD6;
+  background: #FFFFFF;
+  color: #1B1F2A;
+  font-size: 14px;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  filter: brightness(0.94);
+}
+
+/* ---------- Formularios ---------- */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field label {
+  font-size: 13px;
+  color: #555B6B;
+}
+
+.input,
+.select {
+  box-sizing: border-box;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #C9CCD6;
+  border-radius: 8px;
+  background: #FFFFFF;
+  color: #1B1F2A;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* ---------- Listas ---------- */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list-item {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 8px 12px;
+  padding: 12px 16px;
+  border: 1px solid #E2E4EA;
+  border-radius: 10px;
 }
 
-.cabecera-app__selector label {
+.list-item--gris {
+  border-color: transparent;
+  background: #F4F4F4;
+}
+
+.list-item__meta {
+  font-size: 14px;
+  color: #555B6B;
+}
+
+/* Avisos de seguimiento */
+.alert {
+  border: 0;
+}
+
+.alert--vuelta {
+  background: #FCD042;
+}
+
+.alert--mentora {
+  background: #FBE3F1;
+}
+
+.alert--avance {
+  background: #EEF0F4;
+}
+
+.alert a {
+  font-weight: 600;
+}
+
+/* Mentoras con avatar */
+.persona {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #E2E4EA;
+  border-radius: 10px;
+}
+
+.avatar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FBE3F1;
+  color: #1E3388;
+  font-weight: 700;
+}
+
+.avatar--verde {
+  background: #D9F7E7;
+}
+
+.avatar--morado {
+  background: #EFE5FF;
+}
+
+.avatar--md {
+  width: 52px;
+  height: 52px;
+  font-size: 20px;
+}
+
+.avatar--lg {
+  width: 64px;
+  height: 64px;
+  font-size: 24px;
+}
+
+/* ---------- Indicadores ---------- */
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #E2E4EA;
+  border-radius: 14px;
+}
+
+.stat__label {
   font-size: 13px;
-  font-weight: 600;
+  color: #555B6B;
 }
 
-.cabecera-app__selector select {
-  height: 44px;
-  min-width: 260px;
-  padding: 0 16px;
-  border: 1px solid var(--borde);
+.stat__value {
+  font-family: Roboto, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.stat__detail {
+  font-size: 13px;
+  color: #3A3F4C;
+}
+
+.amount {
+  font-family: Roboto, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.amount span {
+  color: #555B6B;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.option {
+  flex: 1 1 200px;
+  padding: 18px;
+  border: 1px solid #E2E4EA;
+  border-radius: 12px;
+}
+
+.option h2,
+.option h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+/* Barra de progreso */
+.bar {
+  height: 10px;
+  overflow: hidden;
   border-radius: 999px;
-  background: var(--blanco);
-  color: var(--texto);
-  font-family: var(--fuente-texto);
-  font-size: 15px;
+  background: #E6E8EE;
+}
+
+.bar__fill {
+  height: 100%;
+  background: var(--accent, #8B3DFF);
+}
+
+.bar__fill--rosa {
+  background: #E674B8;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Filas clave-valor (salario) */
+.kv {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #E2E4EA;
+  font-size: 14px;
+}
+
+.kv:last-of-type {
+  border-bottom: 0;
+}
+
+.kv strong {
   font-weight: 600;
 }
 
+/* Enlace a la web de un curso */
+.course-link {
+  color: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Tablas ---------- */
+.table-scroll {
+  position: relative;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th {
+  padding: 10px 12px;
+  border-bottom: 1px solid #E2E4EA;
+  color: #555B6B;
+  font-size: 13px;
+  text-align: left;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #EEF0F4;
+}
+
+/* ---------- Móvil ---------- */
 @media (max-width: 720px) {
-  .cabecera-app__fila {
+  .header__fila {
     padding: 12px 16px;
   }
 
-  .cabecera-app__fila--secundaria {
-    padding-top: 0;
+  .page {
+    padding: 20px 16px;
   }
 
-  .cabecera-app__selector select {
-    min-width: 0;
-    width: 100%;
+  .page-top {
+    padding: 20px 16px 0;
+  }
+
+  .page-top + .page {
+    padding-top: 20px;
+  }
+
+  .page-title,
+  .page-title--lg {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 20px;
   }
 }

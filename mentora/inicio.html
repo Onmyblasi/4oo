@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · Mentora · Inicio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="app" data-perfil="mentora" data-pagina="inicio">
+<script src="../js/layout.js"></script>
+
+<main id="contenido" class="page">
+  <h1 class="page-title">Hola, Laura. Acompañas a 3 viajeras.</h1>
+
+  <div class="row">
+    <section class="card" aria-labelledby="ses-title" style="gap: 12px">
+      <div class="card__head">
+        <h2 id="ses-title" class="card__title card__title--sm">Próxima sesión</h2>
+        <a class="see-all" href="agenda.html">Ver todo<span class="sr-only"> en la agenda</span>&nbsp;<span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="list">
+      <li class="list-item list-item--gris">
+        <span><strong>Jue 14 nov · 9:30</strong> · Marta R.</span>
+        <button type="button" class="btn-secondary">Añadir a calendario (.ics)<span class="sr-only">: sesión con Marta R.</span></button>
+      </li>
+      </ul>
+      <p class="muted">Compatible con Teams, Google Meet y Outlook.</p>
+    </section>
+
+    <section class="card" aria-labelledby="aten-title" style="gap: 12px">
+      <div class="card__head">
+        <h2 id="aten-title" class="card__title card__title--sm">Necesitan atención</h2>
+        <a class="see-all" href="viajeras.html">Ver todo<span class="sr-only"> en mis viajeras</span>&nbsp;<span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="list">
+        <li class="list-item alert alert--vuelta"><span><strong>Andrea P.</strong> · Data Analyst</span><span style="font-size: 14px">Vuelta en 5 semanas</span></li>
+        <li class="list-item alert alert--avance"><span><strong>Javier L.</strong> · QA y testing</span><span style="font-size: 14px">Sin avance en 30 días</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="perf-title" style="gap: 12px">
+    <div class="card__head">
+      <h2 id="perf-title" class="card__title card__title--sm">Mi perfil</h2>
+      <a class="see-all" href="perfil.html">Ver todo<span class="sr-only"> en mi perfil</span>&nbsp;<span aria-hidden="true">→</span></a>
+    </div>
+    <div style="display: flex; gap: 14px; align-items: center">
+      <span class="avatar avatar--md" aria-hidden="true">L</span>
+      <div>
+        <div style="font-weight: 600">Laura García <span class="badge">Interna</span></div>
+        <div style="font-size: 14px; color: #555B6B">Tech Lead · 12 años en desarrollo backend</div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
