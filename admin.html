@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>4oo · Administración</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,28 +18,36 @@
   <a href="admin.html">Administración</a>
 </nav>
 <div style="font-family: Inter, system-ui, sans-serif; color: #1B1F2A; background: #F4F4F4; min-height: 100vh">
-  <header style="background: #FFFFFF; border-bottom: 1px solid #E2E4EA; position: relative">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-      <div style="display: flex; align-items: baseline; gap: 12px">
-        <div style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 28px; color: var(--accent)">4oo</div>
-        <span style="font-size: 14px; color: #555B6B">Administración</span>
+  <header class="cabecera-app">
+    <div class="cabecera-app__fila">
+      <div class="cabecera-app__marca">
+        <a class="marca" href="index.html" aria-label="4oo, ir al inicio">
+          <svg class="marca__logo" viewBox="40 40 284 116" width="88" height="36" aria-hidden="true">
+            <text x="136" y="150" fill="#3A1C3D" font-family="Space Grotesk, sans-serif" font-size="150" text-anchor="end">4</text>
+            <circle cx="186" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
+            <circle cx="282" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
+            <path d="M221.7,122.6 C223,130 236,136 240,150 M246.3,122.6 C245,130 232,136 228,150" fill="none" stroke="#3A1C3D" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="marca__lema">For Our Ovaries</span>
+        </a>
+        <span class="cabecera-app__rol">Administración</span>
       </div>
-      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
-        <label for="empresa" style="font-size: 13px; font-weight: 600; color: #3A3F4C">Empresa <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN33</span></label>
-        <select id="empresa" style="height: 44px; min-width: 260px; padding: 0 12px; border: 2px solid var(--accent); border-radius: 8px; font-size: 15px; font-weight: 600; background: #FFFFFF"><option>Software Málaga S.L.</option><option>Datos Sur S.A.</option><option>Consultora Norte S.L.</option></select>
+      <div class="cabecera-app__selector">
+        <label for="empresa">Empresa</label>
+        <select id="empresa"><option>Software Málaga S.L.</option><option>Datos Sur S.A.</option><option>Consultora Norte S.L.</option></select>
       </div>
     </div>
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 32px 12px">
-      <nav aria-label="Secciones admin" style="display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center">
-        <span style="font-size: 12px; font-weight: 600; color: #1E3388; margin-right: 4px">EMPRESA SELECCIONADA</span>
-        <a href="#usuarias" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Usuarias y roles</a>
-        <a href="#internas" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Mentoras internas</a>
-        <a href="#informe" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Informe de formación</a>
-        <span aria-hidden="true" style="width: 1px; height: 24px; background: #E2E4EA; margin: 0 8px"></span>
-        <span style="font-size: 12px; font-weight: 600; color: #1E3388; margin-right: 4px">GLOBAL</span>
-        <a href="#empresas" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Empresas</a>
-        <a href="#cursos" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Cursos y rutas</a>
-        <a href="#externas" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Mentoras externas</a>
+    <div class="cabecera-app__fila cabecera-app__fila--secundaria">
+      <nav class="cabecera-app__nav" aria-label="Secciones admin">
+        <span class="cabecera-app__grupo">Empresa seleccionada</span>
+        <a class="cabecera-app__enlace" href="#usuarias">Usuarias y roles</a>
+        <a class="cabecera-app__enlace" href="#internas">Mentoras internas</a>
+        <a class="cabecera-app__enlace" href="#informe">Informe de formación</a>
+        <span class="cabecera-app__separador" aria-hidden="true"></span>
+        <span class="cabecera-app__grupo">Global</span>
+        <a class="cabecera-app__enlace" href="#empresas">Empresas</a>
+        <a class="cabecera-app__enlace" href="#cursos">Cursos y rutas</a>
+        <a class="cabecera-app__enlace" href="#externas">Mentoras externas</a>
       </nav>
     </div>
   </header>
@@ -49,10 +57,10 @@
       <h1 style="margin: 0; font-family: Roboto, sans-serif; font-size: 26px">Software Málaga S.L.</h1>
       <span style="font-size: 13px; font-weight: 600; color: #1E3388; background: #EFE5FF; padding: 4px 10px; border-radius: 999px">Datos de la empresa seleccionada</span>
     </div>
-    <p style="margin: -12px 0 0; font-size: 13px; color: #555B6B">Cambia de empresa en el selector de arriba. Solo Administración puede cambiar de empresa (RN37).</p>
+    <p style="margin: -12px 0 0; font-size: 13px; color: #555B6B">Cambia de empresa en el selector de arriba. Solo Administración puede cambiar de empresa.</p>
 
     <section id="usuarias" aria-labelledby="usu-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-      <h2 id="usu-title" style="margin: 0; font-size: 20px">Usuarias y roles de Software Málaga S.L. <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN21</span></h2>
+      <h2 id="usu-title" style="margin: 0; font-size: 20px">Usuarias y roles de Software Málaga S.L.</h2>
       <div style="overflow-x: auto">
         <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 600px">
           <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
@@ -71,7 +79,7 @@
 
     <section id="internas" aria-labelledby="int-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="int-title" style="margin: 0; font-size: 20px">Mentoras internas <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN17 · RN18 · RN36</span></h2>
+        <h2 id="int-title" style="margin: 0; font-size: 20px">Mentoras internas</h2>
         <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nueva mentora interna</button>
       </div>
       <p style="margin: 0; font-size: 13px; color: #555B6B">Solo acompañan a personas de Software Málaga S.L.</p>
@@ -88,7 +96,7 @@
 
     <section id="informe" aria-labelledby="inf-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="inf-title" style="margin: 0; font-size: 20px">Informe de formación <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN30 · RN31</span></h2>
+        <h2 id="inf-title" style="margin: 0; font-size: 20px">Informe de formación</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 8px">
           <button type="button" style="min-height: 44px; padding: 0 16px; border: 1px solid #C9CCD6; border-radius: 8px; background: #FFFFFF; color: #1B1F2A; font-size: 14px; font-weight: 600; cursor: pointer">Exportar Excel</button>
           <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">Exportar PDF</button>
@@ -137,7 +145,7 @@
 
     <section id="empresas" aria-labelledby="emps-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="emps-title" style="margin: 0; font-size: 20px">Empresas <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN34</span></h2>
+        <h2 id="emps-title" style="margin: 0; font-size: 20px">Empresas</h2>
         <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nueva empresa</button>
       </div>
       <div style="overflow-x: auto">
@@ -160,23 +168,24 @@
 
     <section id="cursos" aria-labelledby="cur-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="cur-title" style="margin: 0; font-size: 20px">Cursos por rol y rutas <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN16</span></h2>
+        <h2 id="cur-title" style="margin: 0; font-size: 20px">Cursos por rol y rutas</h2>
         <span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #EFE5FF; padding: 4px 10px; border-radius: 999px">Catálogo común a todas las empresas</span>
         <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nuevo curso</button>
       </div>
       <div style="overflow-x: auto">
-        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 860px">
           <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
             <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Curso</th>
             <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Rol</th>
             <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Ruta</th>
             <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Horas</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">URL</th>
             <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Acción</th>
           </tr></thead>
           <tbody>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Docker y contenedores</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Desarrollo backend</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Backend moderno</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">6</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Power BI avanzado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data Analyst</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">10</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
-            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Testing automatizado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA y testing</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">8</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Docker y contenedores</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Desarrollo backend</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Backend moderno</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">6</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#" target="_blank" rel="noopener noreferrer" style="font-weight: 600">Ver web<span class="sr-only"> del curso Docker y contenedores (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Power BI avanzado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data Analyst</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">10</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#" target="_blank" rel="noopener noreferrer" style="font-weight: 600">Ver web<span class="sr-only"> del curso Power BI avanzado (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Testing automatizado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA y testing</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">8</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#" target="_blank" rel="noopener noreferrer" style="font-weight: 600">Ver web<span class="sr-only"> del curso Testing automatizado (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -184,7 +193,7 @@
 
     <section id="externas" aria-labelledby="ext-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
-        <h2 id="ext-title" style="margin: 0; font-size: 20px">Mentoras externas <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN17 · RN18 · RN35</span></h2>
+        <h2 id="ext-title" style="margin: 0; font-size: 20px">Mentoras externas</h2>
         <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nueva mentora externa</button>
       </div>
       <p style="margin: 0; font-size: 13px; color: #555B6B">Disponibles para todas las empresas. Se incentivan con certificados.</p>

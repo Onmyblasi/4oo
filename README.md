@@ -65,7 +65,7 @@
 
 | ID | Regla |
 |----|-------|
-| RN16 | Mantenimiento de cursos por rol y sus rutas asociadas (de momento, manual). |
+| RN16 | Mantenimiento de cursos por rol y sus rutas asociadas (de momento, manual). Incluye la URL de la web de cada curso. |
 | RN17 | Las mentoras pueden ser internas o externas; las externas se incentivan con certificados. |
 || RN33 | Seleccionar la empresa en la cabecera (siempre visible). Filtra solo la zona "Empresa seleccionada": usuarias y roles, mentoras internas e informe de formación. La zona "Configuración global" (empresas, cursos y rutas, mentoras externas) no cambia con el filtro. |
 | RN18 | Mantenimiento de mentoras en dos listados: internas (por empresa) y externas (globales). Datos: nombre, resumen profesional y correo de contacto. |
@@ -84,3 +84,4 @@
 |----|-------|
 | RN22 | El simulador muestra el aviso "cálculo orientativo, no es asesoramiento legal". |
 | RN37 | RRHH, mentoras internas y usuarias solo ven los datos de su propia empresa. Solo Administración puede cambiar de empresa. |
+| RN39 | Cada curso de la ruta y de los cursos recomendados tiene un enlace a su web. Se abre en una pestaña nueva e indica el proveedor (catálogo de la empresa o externo). |

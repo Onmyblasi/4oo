@@ -17,6 +17,10 @@
   --amarillo: #FFD23F;
   --verde: #3DDC84;
 
+  /* Usados por las vistas internas */
+  --accent: var(--morado);
+  --navy: var(--texto);
+
   --fuente-titulos: 'Space Grotesk', sans-serif;
   --fuente-texto: 'Inter', sans-serif;
 }
@@ -39,6 +43,19 @@ body {
   max-width: 1040px;
   margin: 0 auto;
   padding: 32px 24px 64px;
+}
+
+/* Texto solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ---------- Cabecera ---------- */
@@ -196,3 +213,170 @@ body {
 }
 .proto-nav a { color: #FFFFFF; text-decoration: none; padding: 6px 0; }
 .proto-nav a:hover { text-decoration: underline; color: #FFFFFF; }
+
+
+/* ---------- Cabecera de las vistas internas ----------
+   Mismo estilo que la cabecera de la portada. */
+.cabecera-app {
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+}
+
+.cabecera-app__fila {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cabecera-app__fila--secundaria {
+  padding-top: 0;
+  justify-content: flex-start;
+}
+
+.cabecera-app__fila--secundaria .cabecera-app__enlace {
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.cabecera-app__marca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.cabecera-app__rol {
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+.cabecera-app__etiqueta {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--texto-suave);
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.cabecera-app__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.cabecera-app__grupo {
+  font-family: var(--fuente-titulos);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin-right: 4px;
+}
+
+.cabecera-app__separador {
+  width: 1px;
+  height: 24px;
+  background: var(--borde);
+  margin: 0 8px;
+}
+
+.cabecera-app__enlace {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--texto);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cabecera-app__enlace:hover {
+  background: var(--blanco);
+  border-color: var(--borde);
+}
+
+.cabecera-app__enlace--activo,
+.cabecera-app__enlace--activo:hover {
+  background: var(--texto);
+  border-color: var(--texto);
+  color: var(--blanco);
+}
+
+.cabecera-app__usuaria {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px 0 6px;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cabecera-app__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  color: var(--texto);
+  background: var(--rosa);
+}
+
+.cabecera-app__selector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.cabecera-app__selector label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cabecera-app__selector select {
+  height: 44px;
+  min-width: 260px;
+  padding: 0 16px;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--blanco);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .cabecera-app__fila {
+    padding: 12px 16px;
+  }
+
+  .cabecera-app__fila--secundaria {
+    padding-top: 0;
+  }
+
+  .cabecera-app__selector select {
+    min-width: 0;
+    width: 100%;
+  }
+}

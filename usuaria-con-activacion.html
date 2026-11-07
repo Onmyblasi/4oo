@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>4oo · Usuaria con activación</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,18 +18,28 @@
   <a href="admin.html">Administración</a>
 </nav>
 <div style="font-family: Inter, system-ui, sans-serif; color: #1B1F2A; background: #F4F4F4; min-height: 100vh">
-  <header style="background: #FFFFFF; border-bottom: 1px solid #E2E4EA">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-      <div style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 28px; color: var(--accent)">4oo</div>
-      <nav aria-label="Áreas" style="display: flex; flex-wrap: wrap; gap: 8px">
-        <a href="#mi-ruta" style="padding: 12px 16px; border-radius: 8px; background: var(--accent); color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">Mi ruta</a>
-        <a href="#salario" style="padding: 12px 16px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 15px">Mi salario</a>
-        <a href="#mentora" style="padding: 12px 16px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 15px">Mi mentora</a>
-        <a href="#pasaporte" style="padding: 12px 16px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 15px">Mi pasaporte</a>
+  <header class="cabecera-app">
+    <div class="cabecera-app__fila">
+      <div class="cabecera-app__marca">
+        <a class="marca" href="index.html" aria-label="4oo, ir al inicio">
+          <svg class="marca__logo" viewBox="40 40 284 116" width="88" height="36" aria-hidden="true">
+            <text x="136" y="150" fill="#3A1C3D" font-family="Space Grotesk, sans-serif" font-size="150" text-anchor="end">4</text>
+            <circle cx="186" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
+            <circle cx="282" cy="113" r="31" fill="none" stroke="#3A1C3D" stroke-width="12"/>
+            <path d="M221.7,122.6 C223,130 236,136 240,150 M246.3,122.6 C245,130 232,136 228,150" fill="none" stroke="#3A1C3D" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <span class="marca__lema">For Our Ovaries</span>
+        </a>
+      </div>
+      <nav class="cabecera-app__nav" aria-label="Áreas">
+        <a class="cabecera-app__enlace cabecera-app__enlace--activo" href="#mi-ruta" aria-current="page">Mi ruta</a>
+        <a class="cabecera-app__enlace" href="#salario">Mi salario</a>
+        <a class="cabecera-app__enlace" href="#mentora">Mi mentora</a>
+        <a class="cabecera-app__enlace" href="#pasaporte">Mi pasaporte</a>
       </nav>
-      <div style="display: flex; align-items: center; gap: 12px">
-        <div aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #EFE5FF; color: #1E3388; display: flex; align-items: center; justify-content: center; font-weight: 700">M</div>
-        <span style="font-size: 15px; font-weight: 500">Marta</span>
+      <div class="cabecera-app__usuaria">
+        <span class="cabecera-app__avatar" aria-hidden="true">M</span>
+        Marta
       </div>
     </div>
   </header>
@@ -45,41 +55,41 @@
 
     <div style="display: flex; flex-wrap: wrap; gap: 24px">
       <section id="mi-ruta" aria-labelledby="ruta-title" style="flex: 2 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
-        <h2 id="ruta-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Mi ruta personalizada: Backend moderno <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px; font-family: Inter, sans-serif">RN6</span></h2>
+        <h2 id="ruta-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Mi ruta personalizada: Backend moderno</h2>
         <div>
           <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px"><span>Progreso</span><span style="font-weight: 600">3 de 8 cursos</span></div>
-          <div style="height: 10px; background: #E6E8EE; border-radius: 999px; overflow: hidden"><div style="width: 38%; height: 100%; background: var(--accent)"></div></div>
+          <div role="progressbar" aria-label="Progreso de la ruta" aria-valuemin="0" aria-valuemax="8" aria-valuenow="3" aria-valuetext="3 de 8 cursos" style="height: 10px; background: #E6E8EE; border-radius: 999px; overflow: hidden"><div style="width: 38%; height: 100%; background: var(--accent, #8B3DFF)"></div></div>
           <p style="margin: 8px 0 0; font-size: 13px; color: #555B6B">2 h/semana dentro de tu jornada</p>
         </div>
-        <h3 style="margin: 4px 0 0; font-size: 15px">Marca tu progreso <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN19</span></h3>
+        <h3 style="margin: 4px 0 0; font-size: 15px">Marca tu progreso</h3>
         <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
           <li style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding: 10px 16px; border: 1px solid #E2E4EA; border-radius: 10px">
-            <label for="c1" style="font-weight: 500">Docker y contenedores</label>
-            <select id="c1" style="height: 44px; padding: 0 12px; border: 1px solid #43D685; border-radius: 8px; font-size: 14px; background: #D9F7E7; color: #1E3388; font-weight: 600"><option>Completado</option><option>En curso</option><option>Pendiente</option></select>
+            <span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px"><label for="c1" style="font-weight: 500"><a href="#" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px"><span id="c1-nombre">Docker y contenedores</span><span class="sr-only"> (se abre en una pestaña nueva)</span></a><!-- TODO: URL real del curso --></label><span style="font-size: 12px; color: #555B6B">Catálogo empresa</span></span>
+            <select id="c1" aria-labelledby="c1-nombre" style="height: 44px; padding: 0 12px; border: 1px solid #43D685; border-radius: 8px; font-size: 14px; background: #D9F7E7; color: #1E3388; font-weight: 600"><option>Completado</option><option>En curso</option><option>Pendiente</option></select>
           </li>
           <li style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding: 10px 16px; border: 1px solid #E2E4EA; border-radius: 10px">
-            <label for="c2" style="font-weight: 500">GitHub Copilot para desarrollo</label>
-            <select id="c2" style="height: 44px; padding: 0 12px; border: 1px solid #E0B52E; border-radius: 8px; font-size: 14px; background: #FCD042; color: #1E3388; font-weight: 600"><option>En curso</option><option>Completado</option><option>Pendiente</option></select>
+            <span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px"><label for="c2" style="font-weight: 500"><a href="https://github.com/skills/getting-started-with-github-copilot" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px"><span id="c2-nombre">GitHub Copilot para desarrollo</span><span class="sr-only"> (se abre en una pestaña nueva)</span></a></label><span style="font-size: 12px; color: #555B6B">Externo · GitHub Skills</span></span>
+            <select id="c2" aria-labelledby="c2-nombre" style="height: 44px; padding: 0 12px; border: 1px solid #E0B52E; border-radius: 8px; font-size: 14px; background: #FCD042; color: #1E3388; font-weight: 600"><option>En curso</option><option>Completado</option><option>Pendiente</option></select>
           </li>
           <li style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; padding: 10px 16px; border: 1px solid #E2E4EA; border-radius: 10px">
-            <label for="c3" style="font-weight: 500">APIs con FastAPI</label>
-            <select id="c3" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #EEF0F4; color: #3A3F4C; font-weight: 600"><option>Pendiente</option><option>En curso</option><option>Completado</option></select>
+            <span style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px"><label for="c3" style="font-weight: 500"><a href="https://fastapi.tiangolo.com/tutorial/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px"><span id="c3-nombre">APIs con FastAPI</span><span class="sr-only"> (se abre en una pestaña nueva)</span></a></label><span style="font-size: 12px; color: #555B6B">Externo · Documentación oficial de FastAPI</span></span>
+            <select id="c3" aria-labelledby="c3-nombre" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #EEF0F4; color: #3A3F4C; font-weight: 600"><option>Pendiente</option><option>En curso</option><option>Completado</option></select>
           </li>
         </ul>
       </section>
 
       <section id="salario" aria-labelledby="sal-title" style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
-        <h2 id="sal-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Mi salario <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px; font-family: Inter, sans-serif">RN7</span></h2>
+        <h2 id="sal-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Mi salario</h2>
         <div style="display: flex; justify-content: space-between; font-size: 14px; padding: 8px 0; border-bottom: 1px solid #E2E4EA"><span>Antes</span><span style="font-weight: 600">2.400 €/mes</span></div>
         <div style="display: flex; justify-content: space-between; font-size: 14px; padding: 8px 0; border-bottom: 1px solid #E2E4EA"><span>Con reducción 25 %</span><span style="font-weight: 600">1.800 €/mes</span></div>
         <div style="display: flex; justify-content: space-between; font-size: 14px; padding: 8px 0"><span>Cotización</span><span style="font-weight: 600">[validar normativa]</span></div>
-        <p role="note" style="margin: 0; font-size: 13px; color: #555B6B; background: #F4F4F4; border-radius: 8px; padding: 10px 12px"><strong>RN22 ·</strong> Cálculo orientativo, no es asesoramiento legal.</p>
+        <p role="note" style="margin: 0; font-size: 13px; color: #555B6B; background: #F4F4F4; border-radius: 8px; padding: 10px 12px">Cálculo orientativo, no es asesoramiento legal.</p>
       </section>
     </div>
 
     <div style="display: flex; flex-wrap: wrap; gap: 24px">
       <section id="mentora" aria-labelledby="ment-title" style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-        <h2 id="ment-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Mi mentora <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px; font-family: Inter, sans-serif">RN9</span></h2>
+        <h2 id="ment-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Mi mentora</h2>
         <div style="display: flex; gap: 14px; align-items: center">
           <div aria-hidden="true" style="width: 52px; height: 52px; border-radius: 50%; background: #FBE3F1; color: #1E3388; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 20px">L</div>
           <div>
@@ -96,7 +106,7 @@
       </section>
 
       <section id="pasaporte" aria-labelledby="pas-title" style="flex: 2 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-        <h2 id="pas-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Mi pasaporte de competencias <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px; font-family: Inter, sans-serif">RN8</span></h2>
+        <h2 id="pas-title" style="margin: 0; font-family: Roboto, sans-serif; font-size: 22px">Mi pasaporte de competencias</h2>
         <p style="margin: 0; font-size: 13px; color: #555B6B">Contenido por definir. Propuesta: competencias nuevas, cursos completados y horas.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 8px">
           <span style="padding: 8px 12px; border-radius: 999px; background: #D9F7E7; color: #1E3388; font-size: 14px; font-weight: 500">Docker · nuevo</span>
