@@ -1,0 +1,187 @@
+/* =========================================
+   4oo · For Our Ovaries
+   Estilos de la página de inicio
+   ========================================= */
+
+/* ---------- Colores y tipografías ----------
+   Si cambiamos de paleta, solo hay que tocar esto. */
+:root {
+  --fondo: #FBF4EE;
+  --texto: #3A1C3D;
+  --texto-suave: #5B4A5C;
+  --borde: #E3D3C9;
+  --blanco: #FFFFFF;
+
+  --morado: #8B3DFF;
+  --rosa: #FF7AC6;
+  --amarillo: #FFD23F;
+  --verde: #3DDC84;
+
+  --fuente-titulos: 'Space Grotesk', sans-serif;
+  --fuente-texto: 'Inter', sans-serif;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+}
+
+.contenedor {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--texto);
+  text-decoration: none;
+}
+
+.marca__lema {
+  font-family: var(--fuente-titulos);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.boton-cuenta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  color: var(--texto);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.boton-cuenta:hover {
+  background: var(--blanco);
+}
+
+/* ---------- Título de la página ---------- */
+.inicio__titulo {
+  margin: 56px 0 0;
+  font-family: var(--fuente-titulos);
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.inicio__intro {
+  max-width: 560px;
+  margin: 12px 0 0;
+  color: var(--texto-suave);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ---------- Las cuatro áreas ---------- */
+.areas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 40px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 300px;
+  padding: 32px;
+  color: var(--texto);
+  text-decoration: none;
+  transition: filter 0.2s;
+}
+
+.area:hover {
+  filter: brightness(0.95);
+}
+
+/* Borde visible al navegar con el teclado */
+.area:focus-visible {
+  outline: 4px solid var(--texto);
+  outline-offset: -4px;
+}
+
+.area__titulo {
+  max-width: 260px;
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.area__dibujo {
+  align-self: flex-end;
+  width: 200px;
+  height: 140px;
+}
+
+/* Un color para cada área */
+.area--simulador {
+  background: var(--morado);
+  color: var(--blanco);
+}
+
+.area--red {
+  background: var(--rosa);
+}
+
+.area--rutas {
+  background: var(--amarillo);
+}
+
+.area--perfil {
+  background: var(--verde);
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 720px) {
+  .inicio__titulo {
+    margin-top: 40px;
+    font-size: 34px;
+  }
+
+  .areas {
+    grid-template-columns: 1fr;
+  }
+
+  .area {
+    min-height: 220px;
+  }
+
+  .area__dibujo {
+    width: 160px;
+    height: 112px;
+  }
+}
