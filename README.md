@@ -69,6 +69,9 @@
 | RN21 | Gestionar usuarias y roles (usuaria, RRHH, mentora, admin). |
 
 ---
+## RRHH y Administración
+| RN30 |  Generar y exportar (PDF o Excel) un informe de formación por periodo de las personas en reducción de jornada o excedencia: persona, situación, curso, horas, fecha de finalización y competencias adquiridas. Sirve como evidencia ante la Administración Pública (Inspección de Trabajo, plan de igualdad, FUNDAE). |
+| RN31 |  El informe se puede filtrar por periodo, por situación (reducción de jornada o excedencia) y por sexo. |
 
 ## Transversal
 
