@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi pasaporte · 4oo</title>
+  <meta name="description" content="Tu pasaporte de competencias: lo que sabes hacer, lo que has aprendido y quién lo avala.">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+
+  <!-- Estilos: primero los comunes, luego los de esta página -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+  <div class="contenedor">
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+      <a class="marca marca--morada" href="./" aria-label="4oo, ir al inicio">
+        <svg class="marca__logo" viewBox="52 41 253 113" width="81" height="36" aria-hidden="true">
+          <text x="147" y="150" fill="#8B3DFF" font-family="Space Grotesk, sans-serif" font-weight="600" font-size="150" text-anchor="end">4</text>
+          <circle cx="186" cy="113" r="31" fill="none" stroke="#8B3DFF" stroke-width="12"/>
+          <circle cx="264" cy="113" r="31" fill="none" stroke="#8B3DFF" stroke-width="12"/>
+        </svg>
+        <span class="marca__lema">For Our Ovaries</span>
+      </a>
+
+      <a class="boton-cuenta" href="cuenta.html">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+        </svg>
+        Cuenta
+      </a>
+    </header>
+
+    <!-- PESTAÑAS DE LAS CUATRO ÁREAS -->
+    <nav class="pestanas" aria-label="Áreas de 4oo">
+      <a class="pestana" href="simulador.html">Simulador y panel</a>
+      <a class="pestana" href="red.html">Red de mentoras</a>
+      <a class="pestana" href="rutas.html">Rutas y cursos</a>
+      <a class="pestana pestana--activa" href="pasaporte.html" aria-current="page">Mi perfil y pasaporte</a>
+    </nav>
+
+    <main>
+      <h1 class="pagina__titulo">Mi pasaporte</h1>
+      <p class="pagina__intro">Lo que sabes hacer, lo que has aprendido y quién lo avala. Es tuyo y te lo llevas a donde vayas.</p>
+
+      <!-- FICHA: los datos principales del pasaporte -->
+      <section class="ficha" aria-label="Datos del pasaporte">
+        <div class="ficha__foto" aria-hidden="true">ML</div>
+
+        <div class="ficha__datos">
+          <p class="ficha__etiqueta">Pasaporte de competencias</p>
+          <h2 class="ficha__nombre">Marta López</h2>
+          <p class="ficha__dato">Desarrolladora web · Málaga</p>
+          <p class="ficha__dato">En reducción de jornada desde septiembre de 2026</p>
+          <p class="ficha__dato">Su mentora: Lucía Ortega</p>
+          <div class="ficha__acciones">
+            <a class="boton boton--oscuro" href="#">Descargar en PDF</a>
+            <a class="boton boton--claro" href="#">Compartir</a>
+          </div>
+        </div>
+
+        <ul class="ficha__cifras">
+          <li class="cifra"><span class="cifra__numero">8</span> <span class="cifra__texto">competencias</span></li>
+          <li class="cifra"><span class="cifra__numero">3</span> <span class="cifra__texto">sellos de su mentora</span></li>
+          <li class="cifra"><span class="cifra__numero">38 h</span> <span class="cifra__texto">de formación este año</span></li>
+        </ul>
+      </section>
+
+      <!-- COMPETENCIAS -->
+      <section class="seccion" aria-labelledby="titulo-competencias">
+        <div class="seccion__cabecera">
+          <div>
+            <h2 class="seccion__titulo" id="titulo-competencias">Competencias</h2>
+            <p class="seccion__intro">Vengan del trabajo, de un curso o de cuidar, cuentan igual.</p>
+          </div>
+          <a class="boton boton--oscuro" href="#">Añadir competencia</a>
+        </div>
+
+        <!-- Filtros: el código de js/perfil.js muestra solo las del origen elegido -->
+        <div class="filtros" role="group" aria-label="Filtrar competencias">
+          <button class="filtro" type="button" data-filtro="todas" aria-pressed="true">Todas · 8</button>
+          <button class="filtro" type="button" data-filtro="trabajo" aria-pressed="false">Trabajo · 2</button>
+          <button class="filtro" type="button" data-filtro="curso" aria-pressed="false">Cursos · 3</button>
+          <button class="filtro" type="button" data-filtro="cuidados" aria-pressed="false">Cuidados · 3</button>
+        </div>
+
+        <ul class="competencias">
+          <li class="competencia" data-origen="trabajo">
+            <span class="origen origen--trabajo">Trabajo</span>
+            <h3 class="competencia__nombre">JavaScript</h3>
+            <p class="nivel" aria-label="Nivel 4 de 4"><span class="nivel__cuadros" data-nivel="4"></span>Nivel 4 de 4</p>
+            <p class="competencia__fuente">6 años en el equipo de producto</p>
+          </li>
+
+          <li class="competencia" data-origen="trabajo">
+            <span class="origen origen--trabajo">Trabajo</span>
+            <h3 class="competencia__nombre">React</h3>
+            <p class="nivel" aria-label="Nivel 3 de 4"><span class="nivel__cuadros" data-nivel="3"></span>Nivel 3 de 4</p>
+            <p class="competencia__fuente">3 proyectos en producción</p>
+          </li>
+
+          <li class="competencia" data-origen="curso">
+            <span class="sello sello--certificado">Certificado<small>4oo</small></span>
+            <span class="origen origen--curso">Curso</span>
+            <h3 class="competencia__nombre">Testing automatizado</h3>
+            <p class="nivel" aria-label="Nivel 2 de 4"><span class="nivel__cuadros" data-nivel="2"></span>Nivel 2 de 4</p>
+            <p class="competencia__fuente">Curso Testing con Jest, 12 h</p>
+          </li>
+
+          <li class="competencia" data-origen="curso">
+            <span class="sello sello--certificado">Certificado<small>4oo</small></span>
+            <span class="origen origen--curso">Curso</span>
+            <h3 class="competencia__nombre">Inglés técnico</h3>
+            <p class="nivel" aria-label="Nivel 3 de 4"><span class="nivel__cuadros" data-nivel="3"></span>Nivel 3 de 4</p>
+            <p class="competencia__fuente">Curso de inglés B2, 16 h</p>
+          </li>
+
+          <li class="competencia" data-origen="curso">
+            <span class="origen origen--curso">Curso</span>
+            <h3 class="competencia__nombre">Accesibilidad web</h3>
+            <p class="nivel" aria-label="Nivel 1 de 4"><span class="nivel__cuadros" data-nivel="1"></span>Nivel 1 de 4</p>
+            <p class="competencia__fuente">Curso en marcha, 10 de 16 h</p>
+          </li>
+
+          <li class="competencia" data-origen="cuidados">
+            <span class="sello sello--avalada">Avalada<small>Lucía</small></span>
+            <span class="origen origen--cuidados">Cuidados</span>
+            <h3 class="competencia__nombre">Organizar y priorizar</h3>
+            <p class="nivel" aria-label="Nivel 4 de 4"><span class="nivel__cuadros" data-nivel="4"></span>Nivel 4 de 4</p>
+            <p class="competencia__fuente">Cuadrar trabajo, guardería y médicos cada semana</p>
+          </li>
+
+          <li class="competencia" data-origen="cuidados">
+            <span class="sello sello--avalada">Avalada<small>Lucía</small></span>
+            <span class="origen origen--cuidados">Cuidados</span>
+            <h3 class="competencia__nombre">Negociar y llegar a acuerdos</h3>
+            <p class="nivel" aria-label="Nivel 3 de 4"><span class="nivel__cuadros" data-nivel="3"></span>Nivel 3 de 4</p>
+            <p class="competencia__fuente">Repartir los cuidados con la familia</p>
+          </li>
+
+          <li class="competencia" data-origen="cuidados">
+            <span class="sello sello--avalada">Avalada<small>Lucía</small></span>
+            <span class="origen origen--cuidados">Cuidados</span>
+            <h3 class="competencia__nombre">Resolver imprevistos</h3>
+            <p class="nivel" aria-label="Nivel 4 de 4"><span class="nivel__cuadros" data-nivel="4"></span>Nivel 4 de 4</p>
+            <p class="competencia__fuente">Rehacer la semana cuando algo se tuerce</p>
+          </li>
+        </ul>
+      </section>
+
+      <div class="dos-columnas">
+
+        <!-- CURSOS -->
+        <section class="seccion seccion--ancha" aria-labelledby="titulo-cursos">
+          <h2 class="seccion__titulo" id="titulo-cursos">Cursos</h2>
+          <p class="seccion__intro">Cada curso que terminas se suma a tu pasaporte.</p>
+
+          <ul class="lista">
+            <li class="curso">
+              <div>
+                <p class="curso__nombre">Testing con Jest</p>
+                <p class="curso__datos">Catálogo de tu empresa · 12 h · Suma a: Testing automatizado</p>
+              </div>
+              <div class="curso__estado">
+                <span>Terminado en octubre</span>
+                <span class="barra"><span class="barra__relleno" style="width: 100%"></span></span>
+              </div>
+            </li>
+            <li class="curso">
+              <div>
+                <p class="curso__nombre">Accesibilidad web</p>
+                <p class="curso__datos">Te lo recomienda Lucía · 16 h · Suma a: Accesibilidad web</p>
+              </div>
+              <div class="curso__estado">
+                <span>Llevas 10 de 16 h</span>
+                <span class="barra"><span class="barra__relleno" style="width: 62%"></span></span>
+              </div>
+            </li>
+            <li class="curso">
+              <div>
+                <p class="curso__nombre">Inglés técnico B2</p>
+                <p class="curso__datos">Catálogo de tu empresa · 16 h · Suma a: Inglés técnico</p>
+              </div>
+              <div class="curso__estado">
+                <span>Terminado en junio</span>
+                <span class="barra"><span class="barra__relleno" style="width: 100%"></span></span>
+              </div>
+            </li>
+            <li class="curso">
+              <div>
+                <p class="curso__nombre">Liderar equipos técnicos</p>
+                <p class="curso__datos">Te lo recomienda Lucía · 20 h · Suma a: nueva competencia</p>
+              </div>
+              <div class="curso__estado">
+                <span>Sin empezar</span>
+                <span class="barra"><span class="barra__relleno" style="width: 0%"></span></span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- QUIÉN LO VE -->
+        <section class="seccion seccion--estrecha" aria-labelledby="titulo-quien">
+          <h2 class="seccion__titulo" id="titulo-quien">Quién lo ve</h2>
+          <p class="seccion__intro">Tú decides qué se comparte y con quién.</p>
+
+          <ul class="lista">
+            <li class="permiso">
+              <div>
+                <p class="permiso__nombre" id="permiso-mentora">Lucía Ortega, tu mentora</p>
+                <p class="permiso__texto">Ve todo tu pasaporte.</p>
+              </div>
+              <button class="interruptor" type="button" role="switch" aria-checked="true" aria-labelledby="permiso-mentora"></button>
+            </li>
+            <li class="permiso">
+              <div>
+                <p class="permiso__nombre" id="permiso-rrhh">RRHH de tu empresa</p>
+                <p class="permiso__texto">Ve tus competencias y cursos. No ve de dónde salen las de cuidados.</p>
+              </div>
+              <button class="interruptor" type="button" role="switch" aria-checked="true" aria-labelledby="permiso-rrhh"></button>
+            </li>
+            <li class="permiso">
+              <div>
+                <p class="permiso__nombre" id="permiso-enlace">Enlace para compartir</p>
+                <p class="permiso__texto">Para mandarlo con tu CV a otra empresa.</p>
+              </div>
+              <button class="interruptor" type="button" role="switch" aria-checked="false" aria-labelledby="permiso-enlace"></button>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="js/perfil.js"></script>
+</body>
+</html>

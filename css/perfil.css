@@ -1,0 +1,549 @@
+/* =========================================
+   4oo · Mi perfil y pasaporte
+   Estilos solo de esta página.
+   Los colores y tipografías vienen de styles.css
+   ========================================= */
+
+/* ---------- Logo en morado ---------- */
+.marca--morada {
+  color: var(--morado);
+}
+
+/* ---------- Pestañas de las cuatro áreas ---------- */
+.pestanas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.pestana {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 2px solid var(--borde);
+  border-radius: 999px;
+  background: var(--blanco);
+  color: var(--texto);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.pestana:hover {
+  border-color: var(--texto);
+}
+
+.pestana--activa {
+  border-color: var(--verde);
+  background: var(--verde);
+  font-weight: 600;
+}
+
+/* ---------- Título de la página ---------- */
+.pagina__titulo {
+  margin: 48px 0 0;
+  font-family: var(--fuente-titulos);
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.pagina__intro {
+  max-width: 620px;
+  margin: 12px 0 0;
+  color: var(--texto-suave);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.boton--oscuro {
+  background: var(--texto);
+  color: var(--blanco);
+}
+
+.boton--oscuro:hover {
+  background: var(--morado);
+}
+
+.boton--claro {
+  border: 1px solid var(--borde);
+  background: var(--blanco);
+  color: var(--texto);
+}
+
+.boton--claro:hover {
+  border-color: var(--texto);
+}
+
+/* ---------- Ficha verde con los datos principales ---------- */
+.ficha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 32px;
+  padding: 32px;
+  border-radius: 24px;
+  background: var(--verde);
+}
+
+.ficha__foto {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 140px;
+  border: 4px solid var(--texto);
+  background: var(--rosa);
+  font-family: var(--fuente-titulos);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.ficha__datos {
+  display: flex;
+  flex: 1 1 280px;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.ficha__datos p {
+  margin: 0;
+}
+
+.ficha__etiqueta {
+  font-family: var(--fuente-titulos);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.ficha__nombre {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.ficha__dato {
+  font-size: 16px;
+}
+
+.ficha__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.ficha__cifras {
+  display: flex;
+  flex: 1 1 380px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cifra {
+  flex: 1 1 120px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--blanco);
+}
+
+.cifra__numero {
+  display: block;
+  font-family: var(--fuente-titulos);
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.cifra__texto {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+/* ---------- Secciones ---------- */
+.seccion {
+  margin-top: 56px;
+}
+
+.seccion__cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.seccion__titulo {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.seccion__intro {
+  margin: 8px 0 0;
+  color: var(--texto-suave);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ---------- Filtros de competencias ---------- */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.filtro {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--borde);
+  border-radius: 999px;
+  background: var(--blanco);
+  color: var(--texto);
+  font: 500 14px var(--fuente-texto);
+  cursor: pointer;
+}
+
+.filtro[aria-pressed="true"] {
+  border-color: var(--texto);
+  background: var(--texto);
+  color: var(--blanco);
+}
+
+/* ---------- Tarjetas de competencias ---------- */
+.competencias {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.competencia {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 200px;
+  padding: 20px;
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  background: var(--blanco);
+}
+
+/* Se oculta cuando el filtro no coincide */
+.competencia[hidden] {
+  display: none;
+}
+
+.competencia__nombre {
+  margin: 0;
+  padding-right: 72px; /* hueco para el sello */
+  font-family: var(--fuente-titulos);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.competencia__fuente {
+  margin: auto 0 0;
+  color: var(--texto-suave);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* De dónde sale cada competencia */
+.origen {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.origen--trabajo {
+  background: var(--morado);
+  color: var(--blanco);
+}
+
+.origen--curso {
+  background: var(--amarillo);
+}
+
+.origen--cuidados {
+  background: var(--rosa);
+}
+
+/* Nivel de 1 a 4 con cuadraditos */
+.nivel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 13px;
+}
+
+.nivel__cuadros {
+  position: relative;
+  width: 68px;
+  height: 14px;
+  background: repeating-linear-gradient(to right, var(--borde) 0 14px, transparent 14px 18px);
+}
+
+.nivel__cuadros::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: repeating-linear-gradient(to right, var(--morado) 0 14px, transparent 14px 18px);
+}
+
+.nivel__cuadros[data-nivel="1"]::before { width: 14px; }
+.nivel__cuadros[data-nivel="2"]::before { width: 32px; }
+.nivel__cuadros[data-nivel="3"]::before { width: 50px; }
+.nivel__cuadros[data-nivel="4"]::before { width: 68px; }
+
+/* Sello de pasaporte en la esquina */
+.sello {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border: 2px dashed currentColor;
+  border-radius: 50%;
+  font-family: var(--fuente-titulos);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transform: rotate(-12deg);
+}
+
+.sello small {
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.sello--avalada {
+  color: var(--morado);
+}
+
+.sello--certificado {
+  color: var(--texto);
+  font-size: 8px;
+}
+
+/* ---------- Cursos y permisos, en dos columnas ---------- */
+.dos-columnas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.seccion--ancha {
+  flex: 3 1 480px;
+  min-width: 0;
+}
+
+.seccion--estrecha {
+  flex: 2 1 320px;
+  min-width: 0;
+}
+
+/* Tarjeta blanca con filas separadas por una línea */
+.lista {
+  margin: 20px 0 0;
+  padding: 8px 28px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 24px;
+  background: var(--blanco);
+  list-style: none;
+}
+
+.lista > li + li {
+  border-top: 1px solid var(--borde);
+}
+
+.curso {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 18px 0;
+}
+
+.curso > div:first-child {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.curso__nombre {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.curso__datos {
+  margin: 4px 0 0;
+  color: var(--texto-suave);
+  font-size: 14px;
+}
+
+.curso__estado {
+  display: flex;
+  flex: 0 1 200px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-width: 160px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Barra de progreso */
+.barra {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--borde);
+  overflow: hidden;
+}
+
+.barra__relleno {
+  display: block;
+  height: 100%;
+  background: var(--verde);
+}
+
+/* Quién puede ver el pasaporte */
+.permiso {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.permiso__nombre {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.permiso__texto {
+  margin: 4px 0 0;
+  color: var(--texto-suave);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* Interruptor de encendido y apagado */
+.interruptor {
+  position: relative;
+  flex: none;
+  width: 44px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--borde);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.interruptor::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--blanco);
+  box-shadow: 0 1px 2px rgba(58, 28, 61, 0.3);
+  transition: left 0.2s;
+}
+
+.interruptor[aria-checked="true"] {
+  background: var(--verde);
+}
+
+.interruptor[aria-checked="true"]::after {
+  left: 22px;
+}
+
+/* Borde visible al navegar con el teclado */
+.pestana:focus-visible,
+.boton:focus-visible,
+.filtro:focus-visible,
+.interruptor:focus-visible {
+  outline: 3px solid var(--morado);
+  outline-offset: 2px;
+}
+
+/* ---------- Pantallas medianas: competencias en dos columnas ---------- */
+@media (max-width: 960px) {
+  .competencias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 720px) {
+  .pagina__titulo {
+    margin-top: 40px;
+    font-size: 34px;
+  }
+
+  .ficha {
+    padding: 24px;
+  }
+
+  .competencias {
+    grid-template-columns: 1fr;
+  }
+
+  .lista {
+    padding: 4px 20px 8px;
+  }
+}
