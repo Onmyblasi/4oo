@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · Mentora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav aria-label="Pantallas del prototipo" class="proto-nav">
+  <a href="index.html">← Índice</a>
+  <a href="usuaria-sin-activacion.html">Usuaria (sin activación)</a>
+  <a href="usuaria-con-activacion.html">Usuaria (con activación)</a>
+  <a href="rrhh.html">RRHH</a>
+  <a href="mentora.html">Mentora</a>
+  <a href="admin.html">Administración</a>
+</nav>
+<div style="font-family: Inter, system-ui, sans-serif; color: #1B1F2A; background: #F4F4F4; min-height: 100vh">
+  <header style="background: #FFFFFF; border-bottom: 1px solid #E2E4EA">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <div style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 28px; color: var(--accent)">4oo</div>
+      <nav aria-label="Secciones mentora" style="display: flex; flex-wrap: wrap; gap: 8px">
+        <a href="#viajeras" style="padding: 12px 16px; border-radius: 8px; background: var(--accent); color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px">Mis viajeras</a>
+        <a href="#agenda" style="padding: 12px 16px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 15px">Agenda</a>
+        <a href="#perfil" style="padding: 12px 16px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 15px">Mi perfil</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #FBE3F1; color: #1E3388; display: flex; align-items: center; justify-content: center; font-weight: 700">L</div>
+        <span style="font-size: 15px; font-weight: 500">Laura</span>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width: 1200px; margin: 0 auto; padding: 32px; display: flex; flex-direction: column; gap: 28px">
+    <h1 style="margin: 0; font-family: Roboto, sans-serif; font-size: 32px">Hola, Laura. Acompañas a 3 viajeras.</h1>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px">
+      <section id="viajeras" aria-labelledby="via-title" style="flex: 1 1 420px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+        <h2 id="via-title" style="margin: 0; font-size: 20px">Mis viajeras <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN12</span></h2>
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+          <li style="padding: 12px 16px; border: 1px solid #E2E4EA; border-radius: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px"><span><strong>Marta R.</strong> · Backend moderno</span><span style="font-size: 14px; color: #555B6B">3/8 cursos · vuelta nov 2028</span></li>
+          <li style="padding: 12px 16px; border: 1px solid #E2E4EA; border-radius: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px"><span><strong>Andrea P.</strong> · Data Analyst</span><span style="font-size: 14px; color: #555B6B">5/6 cursos · vuelta en 5 semanas</span></li>
+          <li style="padding: 12px 16px; border: 1px solid #E2E4EA; border-radius: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px"><span><strong>Javier L.</strong> · QA y testing</span><span style="font-size: 14px; color: #555B6B">2/5 cursos · vuelta jun 2027</span></li>
+        </ul>
+      </section>
+
+      <section id="agenda" aria-labelledby="ag-title" style="flex: 1 1 420px; min-width: 0; background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+        <h2 id="ag-title" style="margin: 0; font-size: 20px">Agenda <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN13 · RN14</span></h2>
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+          <li style="padding: 12px 16px; background: #F4F4F4; border-radius: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px">
+            <span><strong>Jue 14 nov · 9:30</strong> · Marta R.</span>
+            <a href="#agenda" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border: 1px solid #C9CCD6; border-radius: 8px; background: #FFFFFF; color: #1B1F2A; text-decoration: none; font-size: 14px; font-weight: 600">Añadir a calendario (.ics)</a>
+          </li>
+          <li style="padding: 12px 16px; background: #F4F4F4; border-radius: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px">
+            <span><strong>Vie 15 nov · 12:00</strong> · Andrea P.</span>
+            <a href="#agenda" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border: 1px solid #C9CCD6; border-radius: 8px; background: #FFFFFF; color: #1B1F2A; text-decoration: none; font-size: 14px; font-weight: 600">Añadir a calendario (.ics)</a>
+          </li>
+          <li style="padding: 12px 16px; background: #F4F4F4; border-radius: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px">
+            <span><strong>Mar 19 nov · 16:00</strong> · Javier L.</span>
+            <a href="#agenda" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border: 1px solid #C9CCD6; border-radius: 8px; background: #FFFFFF; color: #1B1F2A; text-decoration: none; font-size: 14px; font-weight: 600">Añadir a calendario (.ics)</a>
+          </li>
+        </ul>
+        <p style="margin: 0; font-size: 13px; color: #555B6B">Compatible con Teams, Google Meet y Outlook.</p>
+      </section>
+    </div>
+
+    <section id="perfil" aria-labelledby="perf-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+      <h2 id="perf-title" style="margin: 0; font-size: 20px">Así te ven otras personas <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN15</span></h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; border: 1px dashed #C9CCD6; border-radius: 12px; padding: 20px">
+        <div aria-hidden="true" style="width: 64px; height: 64px; border-radius: 50%; background: #FBE3F1; color: #1E3388; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 24px">L</div>
+        <div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 6px">
+          <div style="font-weight: 600; font-size: 17px">Laura García <span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #D9F7E7; padding: 3px 8px; border-radius: 999px">Interna</span></div>
+          <div style="font-size: 14px; color: #555B6B">Tech Lead · 12 años en desarrollo backend</div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.5">Volví de una excedencia en 2024. Te ayudo a priorizar qué aprender y a preparar tu vuelta sin agobios.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

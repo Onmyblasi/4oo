@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4oo · Administración</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav aria-label="Pantallas del prototipo" class="proto-nav">
+  <a href="index.html">← Índice</a>
+  <a href="usuaria-sin-activacion.html">Usuaria (sin activación)</a>
+  <a href="usuaria-con-activacion.html">Usuaria (con activación)</a>
+  <a href="rrhh.html">RRHH</a>
+  <a href="mentora.html">Mentora</a>
+  <a href="admin.html">Administración</a>
+</nav>
+<div style="font-family: Inter, system-ui, sans-serif; color: #1B1F2A; background: #F4F4F4; min-height: 100vh">
+  <header style="background: #FFFFFF; border-bottom: 1px solid #E2E4EA; position: relative">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <div style="display: flex; align-items: baseline; gap: 12px">
+        <div style="font-family: Roboto, sans-serif; font-weight: 700; font-size: 28px; color: var(--accent)">4oo</div>
+        <span style="font-size: 14px; color: #555B6B">Administración</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+        <label for="empresa" style="font-size: 13px; font-weight: 600; color: #3A3F4C">Empresa <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN33</span></label>
+        <select id="empresa" style="height: 44px; min-width: 260px; padding: 0 12px; border: 2px solid var(--accent); border-radius: 8px; font-size: 15px; font-weight: 600; background: #FFFFFF"><option>Software Málaga S.L.</option><option>Datos Sur S.A.</option><option>Consultora Norte S.L.</option></select>
+      </div>
+    </div>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 32px 12px">
+      <nav aria-label="Secciones admin" style="display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center">
+        <span style="font-size: 12px; font-weight: 600; color: #1E3388; margin-right: 4px">EMPRESA SELECCIONADA</span>
+        <a href="#usuarias" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Usuarias y roles</a>
+        <a href="#internas" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Mentoras internas</a>
+        <a href="#informe" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Informe de formación</a>
+        <span aria-hidden="true" style="width: 1px; height: 24px; background: #E2E4EA; margin: 0 8px"></span>
+        <span style="font-size: 12px; font-weight: 600; color: #1E3388; margin-right: 4px">GLOBAL</span>
+        <a href="#empresas" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Empresas</a>
+        <a href="#cursos" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Cursos y rutas</a>
+        <a href="#externas" style="padding: 10px 14px; border-radius: 8px; color: #1B1F2A; text-decoration: none; font-weight: 500; font-size: 14px">Mentoras externas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="max-width: 1200px; margin: 0 auto; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+    <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; padding-bottom: 8px; border-bottom: 2px solid #8B3DFF">
+      <h1 style="margin: 0; font-family: Roboto, sans-serif; font-size: 26px">Software Málaga S.L.</h1>
+      <span style="font-size: 13px; font-weight: 600; color: #1E3388; background: #EFE5FF; padding: 4px 10px; border-radius: 999px">Datos de la empresa seleccionada</span>
+    </div>
+    <p style="margin: -12px 0 0; font-size: 13px; color: #555B6B">Cambia de empresa en el selector de arriba. Solo Administración puede cambiar de empresa (RN37).</p>
+
+    <section id="usuarias" aria-labelledby="usu-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+      <h2 id="usu-title" style="margin: 0; font-size: 20px">Usuarias y roles de Software Málaga S.L. <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN21</span></h2>
+      <div style="overflow-x: auto">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 600px">
+          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Persona</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Correo</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Rol</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Marta R.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">marta@ejemplo.com</td><td style="padding: 8px 12px; border-bottom: 1px solid #EEF0F4"><label for="r1" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Rol de Marta</label><select id="r1" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Usuaria</option><option>RRHH</option><option>Mentora</option><option>Admin</option></select></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Laura García</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">laura@ejemplo.com</td><td style="padding: 8px 12px; border-bottom: 1px solid #EEF0F4"><label for="r2" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Rol de Laura</label><select id="r2" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Mentora</option><option>Usuaria</option><option>RRHH</option><option>Admin</option></select></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Elena T.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">elena@ejemplo.com</td><td style="padding: 8px 12px; border-bottom: 1px solid #EEF0F4"><label for="r3" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Rol de Elena</label><select id="r3" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>RRHH</option><option>Usuaria</option><option>Mentora</option><option>Admin</option></select></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="internas" aria-labelledby="int-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
+        <h2 id="int-title" style="margin: 0; font-size: 20px">Mentoras internas <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN17 · RN18 · RN36</span></h2>
+        <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nueva mentora interna</button>
+      </div>
+      <p style="margin: 0; font-size: 13px; color: #555B6B">Solo acompañan a personas de Software Málaga S.L.</p>
+      <div style="overflow-x: auto">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px">
+          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px"><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Nombre</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Resumen profesional</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Correo</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Acción</th></tr></thead>
+          <tbody>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Laura García</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Tech Lead, 12 años en backend</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">laura@ejemplo.com</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#internas" style="font-weight: 600">Editar</a></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Rocío M.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA Lead, experta en testing automatizado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">rocio@ejemplo.com</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#internas" style="font-weight: 600">Editar</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="informe" aria-labelledby="inf-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
+        <h2 id="inf-title" style="margin: 0; font-size: 20px">Informe de formación <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN30 · RN31</span></h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <button type="button" style="min-height: 44px; padding: 0 16px; border: 1px solid #C9CCD6; border-radius: 8px; background: #FFFFFF; color: #1B1F2A; font-size: 14px; font-weight: 600; cursor: pointer">Exportar Excel</button>
+          <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">Exportar PDF</button>
+        </div>
+      </div>
+      <p style="margin: 0; font-size: 13px; color: #555B6B">Evidencia para la Administración Pública: Inspección de Trabajo, plan de igualdad, FUNDAE.</p>
+      <form style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <label for="inf-periodo" style="font-size: 13px; color: #555B6B">Periodo</label>
+          <select id="inf-periodo" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Ene–Dic 2026</option><option>Ene–Jun 2026</option></select>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <label for="inf-sit" style="font-size: 13px; color: #555B6B">Situación</label>
+          <select id="inf-sit" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Todas</option><option>Reducción de jornada</option><option>Excedencia</option></select>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <label for="inf-sexo" style="font-size: 13px; color: #555B6B">Sexo</label>
+          <select id="inf-sexo" style="height: 44px; padding: 0 12px; border: 1px solid #C9CCD6; border-radius: 8px; font-size: 14px; background: #FFFFFF"><option>Todos</option><option>Mujer</option><option>Hombre</option></select>
+        </div>
+      </form>
+      <div style="overflow-x: auto">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 860px">
+          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Persona</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Situación</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Curso</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Horas</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Finalizado</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Competencias</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Marta R.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Reducción 25 %</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Docker y contenedores</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">6</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">12/03/2026</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Docker</td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Andrea P.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Excedencia</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Power BI avanzado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">10</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">28/05/2026</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Power BI, DAX</td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Javier L.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Reducción 20 %</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Testing automatizado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">8</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">03/09/2026</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Testing</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin: 0; font-size: 13px; color: #555B6B">Total: 3 personas · 3 cursos · 24 h. Datos de ejemplo.</p>
+    </section>
+
+    <div style="height: 16px"></div>
+    <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; padding-bottom: 8px; border-bottom: 2px solid #43D685">
+      <h1 style="margin: 0; font-family: Roboto, sans-serif; font-size: 26px">Configuración global</h1>
+      <span style="font-size: 13px; font-weight: 600; color: #1E3388; background: #D9F7E7; padding: 4px 10px; border-radius: 999px">Común a todas las empresas</span>
+    </div>
+
+    <section id="empresas" aria-labelledby="emps-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
+        <h2 id="emps-title" style="margin: 0; font-size: 20px">Empresas <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN34</span></h2>
+        <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nueva empresa</button>
+      </div>
+      <div style="overflow-x: auto">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 700px">
+          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Empresa</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">CIF</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Plantilla</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Estado</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Acción</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Software Málaga S.L.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">[CIF]</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">80</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #D9F7E7; padding: 3px 8px; border-radius: 999px">Activa</span></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#empresas" style="font-weight: 600">Editar</a></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Datos Sur S.A.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">[CIF]</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">150</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #D9F7E7; padding: 3px 8px; border-radius: 999px">Activa</span></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#empresas" style="font-weight: 600">Editar</a></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Consultora Norte S.L.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">[CIF]</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">320</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><span style="font-size: 12px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 999px">Inactiva</span></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#empresas" style="font-weight: 600">Editar</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="cursos" aria-labelledby="cur-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
+        <h2 id="cur-title" style="margin: 0; font-size: 20px">Cursos por rol y rutas <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN16</span></h2>
+        <span style="font-size: 12px; font-weight: 600; color: #1E3388; background: #EFE5FF; padding: 4px 10px; border-radius: 999px">Catálogo común a todas las empresas</span>
+        <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nuevo curso</button>
+      </div>
+      <div style="overflow-x: auto">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px">
+          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px">
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Curso</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Rol</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Ruta</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Horas</th>
+            <th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Acción</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Docker y contenedores</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Desarrollo backend</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Backend moderno</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">6</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Power BI avanzado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data Analyst</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">10</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Testing automatizado</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">QA y testing</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">8</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#cursos" style="font-weight: 600">Editar</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="externas" aria-labelledby="ext-title" style="background: #FFFFFF; border: 1px solid #E2E4EA; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
+        <h2 id="ext-title" style="margin: 0; font-size: 20px">Mentoras externas <span style="font-size: 11px; font-weight: 600; color: #555B6B; background: #EEF0F4; padding: 3px 8px; border-radius: 6px">RN17 · RN18 · RN35</span></h2>
+        <button type="button" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--accent); color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">+ Nueva mentora externa</button>
+      </div>
+      <p style="margin: 0; font-size: 13px; color: #555B6B">Disponibles para todas las empresas. Se incentivan con certificados.</p>
+      <div style="overflow-x: auto">
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 820px">
+          <thead><tr style="text-align: left; color: #555B6B; font-size: 13px"><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Nombre</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Resumen profesional</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Correo</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Certificado</th><th scope="col" style="padding: 10px 12px; border-bottom: 1px solid #E2E4EA">Acción</th></tr></thead>
+          <tbody>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Carmen S.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Data Scientist, mentora en comunidades tech</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">carmen@ejemplo.com</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#externas" style="font-weight: 600">Emitir certificado</a></td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#externas" style="font-weight: 600">Editar</a></td></tr>
+            <tr><td style="padding: 12px; border-bottom: 1px solid #EEF0F4; font-weight: 500">Pilar N.</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">Product Manager, 10 años en fintech</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">pilar@ejemplo.com</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4">—</td><td style="padding: 12px; border-bottom: 1px solid #EEF0F4"><a href="#externas" style="font-weight: 600">Editar</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
