@@ -22,7 +22,7 @@
 | ID | Regla |
 |----|-------|
 | RN2 | Ver simulaciones según el salario que introduzca. |
-| RN3 | Ver el catálogo de mentoras (solo nombre corto). |
+| RN3 | Ver el catálogo de mentoras (solo nombre corto y una descripcion de su perfil ). |
 | RN4 | Ver ejemplos de rutas según el perfil laboral. |
 | RN5 | Ver los cursos recomendados para su rol. |
 
